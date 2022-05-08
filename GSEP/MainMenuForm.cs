@@ -58,7 +58,7 @@ namespace GSEP
 
         private void manageProductsButton_Click(object sender, EventArgs e)
         {
-            ViewProducts vpf = new ViewProducts();
+            ViewProductsForm vpf = new ViewProductsForm();
             this.Hide();
             vpf.ShowDialog();
             this.Close();

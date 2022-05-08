@@ -399,7 +399,7 @@ namespace GSEP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProductsRow AddProductsRow(string ProductSKU, string ProductName, decimal Price, int Quantity, byte[] DateAdded) {
+            public ProductsRow AddProductsRow(string ProductSKU, string ProductName, decimal Price, int Quantity, System.DateTime DateAdded) {
                 ProductsRow rowProductsRow = ((ProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProductSKU,
@@ -454,7 +454,7 @@ namespace GSEP {
                 base.Columns.Add(this.columnPrice);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
-                this.columnDateAdded = new global::System.Data.DataColumn("DateAdded", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnDateAdded = new global::System.Data.DataColumn("DateAdded", typeof(System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateAdded);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProductSKU}, true));
@@ -652,10 +652,10 @@ namespace GSEP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte[] DateAdded {
+            public System.DateTime DateAdded {
                 get {
                     try {
-                        return ((byte[])(this[this.tableProducts.DateAddedColumn]));
+                        return (System.DateTime)(this[this.tableProducts.DateAddedColumn]);
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'DateAdded\' in table \'Products\' is DBNull.", e);
@@ -949,7 +949,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ProductSKU, byte[] Original_DateAdded) {
+        public virtual int Delete(string Original_ProductSKU, System.DateTime Original_DateAdded) {
             if ((Original_ProductSKU == null)) {
                 throw new global::System.ArgumentNullException("Original_ProductSKU");
             }
@@ -960,7 +960,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
                 throw new global::System.ArgumentNullException("Original_DateAdded");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_DateAdded));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DateAdded));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1017,7 +1017,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProductSKU, string ProductName, decimal Price, int Quantity, string Original_ProductSKU, byte[] Original_DateAdded) {
+        public virtual int Update(string ProductSKU, string ProductName, decimal Price, int Quantity, string Original_ProductSKU, System.DateTime Original_DateAdded) {
             if ((ProductSKU == null)) {
                 throw new global::System.ArgumentNullException("ProductSKU");
             }
@@ -1042,7 +1042,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
                 throw new global::System.ArgumentNullException("Original_DateAdded");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((byte[])(Original_DateAdded));
+                this.Adapter.UpdateCommand.Parameters[5].Value = (System.DateTime)(Original_DateAdded);
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1064,7 +1064,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProductName, decimal Price, int Quantity, string Original_ProductSKU, byte[] Original_DateAdded) {
+        public virtual int Update(string ProductName, decimal Price, int Quantity, string Original_ProductSKU, System.DateTime Original_DateAdded) {
             return this.Update(Original_ProductSKU, ProductName, Price, Quantity, Original_ProductSKU, Original_DateAdded);
         }
     }

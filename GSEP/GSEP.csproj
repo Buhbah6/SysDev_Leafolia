@@ -78,7 +78,6 @@
     </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>ProjectModel.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EmployeesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -87,11 +86,9 @@
     </Compile>
     <Compile Include="Login.cs">
       <DependentUpon>ProjectModel.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Maintenance.cs">
       <DependentUpon>ProjectModel.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MaintenanceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,36 +97,26 @@
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>ProjectModel.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ProductsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ProjectDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="ProjectModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectModel.Context.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ProjectModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectModel.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ProjectModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectModel.edmx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ViewMaintenance.cs">
       <SubType>Form</SubType>
@@ -142,12 +129,6 @@
     </Compile>
     <Compile Include="ManageUsersForm.Designer.cs">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewProducts.Designer.cs">
-      <DependentUpon>ViewProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
@@ -169,14 +150,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProductsForm.Designer.cs">
+      <DependentUpon>ViewProductsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewMaintenance.resx">
       <DependentUpon>ViewMaintenance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewProducts.resx">
-      <DependentUpon>ViewProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageUsersForm.resx">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
@@ -199,6 +183,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewProductsForm.resx">
+      <DependentUpon>ViewProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="EmployeesDataSet.xsc">
       <DependentUpon>EmployeesDataSet.xsd</DependentUpon>
     </None>
@@ -233,28 +220,12 @@
     <None Include="ProductsDataSet.xss">
       <DependentUpon>ProductsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ProjectDBDataSet.xsc">
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ProjectDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ProjectDBDataSet.xss">
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <EntityDeploy Include="ProjectModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ProjectModel.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EntityDeploy>
     <None Include="ProjectModel.edmx.diagram">
       <DependentUpon>ProjectModel.edmx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -296,13 +267,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProjectModel.edmx</DependentUpon>
       <LastGenOutput>ProjectModel.Context.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ProjectModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProjectModel.edmx</DependentUpon>
       <LastGenOutput>ProjectModel.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

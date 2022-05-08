@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GSEP
 {
-    public partial class ViewProducts : Form
+    public partial class ViewProductsForm : Form
     {
-        public ViewProducts()
+        public ViewProductsForm()
         {
             InitializeComponent();
         }
 
-        private void ViewProducts_Load(object sender, EventArgs e)
+        private void ViewProductsForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'productsDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.productsDataSet.Products);
@@ -29,7 +29,8 @@ namespace GSEP
             var dbProducts = new ProjectDBEntities();
             Product currentProduct = new Product();
             List<Product> prodList = dbProducts.Products.ToList();
-            foreach (Product product in prodList) {
+            foreach (Product product in prodList)
+            {
                 if (product.ProductSKU.Equals(skuTextBox.Text))
                 {
                     validProduct = true;
@@ -74,6 +75,7 @@ namespace GSEP
                     skuTextBox.Text + "';";
                 dbProducts.Database.ExecuteSqlCommand(command);
             }
+            this.productsTableAdapter.Fill(this.productsDataSet.Products);
         }
 
         private void editPriceButton_Click(object sender, EventArgs e)
@@ -111,6 +113,7 @@ namespace GSEP
                     skuTextBox.Text + "';";
                 dbProducts.Database.ExecuteSqlCommand(command);
             }
+            this.productsTableAdapter.Fill(this.productsDataSet.Products);
         }
 
         private void addProductButton_Click(object sender, EventArgs e)
@@ -130,7 +133,7 @@ namespace GSEP
             }
             if (String.IsNullOrEmpty(skuTextBox.Text) || String.IsNullOrEmpty(descTextBox.Text) || String.IsNullOrEmpty(priceTextBox.Text))
                 validProduct = false;
-            
+
 
             if (validProduct)
             {
@@ -138,12 +141,13 @@ namespace GSEP
                     "','" + descTextBox.Text + "','" + priceTextBox.Text + "','" + qtyNumericUpDown.Value + "');";
                 productManagement.Database.ExecuteSqlCommand(command);
             }
-                
+
             else
             {
                 MessageBox.Show("Missing Field.\nPlease enter data for all fields to add product successfully.",
                     "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.productsTableAdapter.Fill(this.productsDataSet.Products);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
@@ -152,14 +156,6 @@ namespace GSEP
             this.Hide();
             mmf.ShowDialog();
             this.Close();
-        }
-
-        private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.productsDataSet);
-
         }
     }
 }
