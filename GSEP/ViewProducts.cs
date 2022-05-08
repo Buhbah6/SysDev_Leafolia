@@ -20,6 +20,7 @@ namespace GSEP
         private void ViewProducts_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'productsDataSet.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.productsDataSet.Products);
         }
 
         private void searchSkuButton_Click(object sender, EventArgs e)
@@ -151,6 +152,14 @@ namespace GSEP
             this.Hide();
             mmf.ShowDialog();
             this.Close();
+        }
+
+        private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.productsDataSet);
+
         }
     }
 }

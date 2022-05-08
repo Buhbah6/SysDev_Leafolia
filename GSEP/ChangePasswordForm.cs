@@ -21,11 +21,15 @@ namespace GSEP
         {
             bool validInfo = false;
             var passReqs = new ProjectDBEntities();
+            String passwordHash = "";
             List<Employee> employeeList = passReqs.Employees.ToList();
             foreach (Employee emp in employeeList)
             {
                 if (emp.EmployeeID.Equals(LoginForm.currentEmployeeId))
-                    validInfo = emp.Password == oldPassTextBox.Text;
+                {
+                    validInfo = Employee.unHashPassword(emp.Password, oldPassTextBox.Text);
+                    passwordHash = emp.Password;
+                }
             }
 
             if (validInfo)
@@ -34,8 +38,8 @@ namespace GSEP
                 {
                     if (meetsRequirements(newPassTextBox.Text))
                     {
-                        String command = "UPDATE Employees SET Password = REPLACE('" + oldPassTextBox.Text + "', '" +
-                            oldPassTextBox.Text + "', '" + newPassTextBox.Text + "') WHERE EmployeeID = '" +
+                        String command = "UPDATE Employees SET Password = REPLACE('" + passwordHash + "', '" +
+                            passwordHash + "', '" + Employee.hashPassword(newPassTextBox.Text) + "') WHERE EmployeeID = '" +
                             LoginForm.currentEmployeeId + "';";
                         passReqs.Database.ExecuteSqlCommand(command);
                         MessageBox.Show("Password Changed Successfully. Returning to Main Menu.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -29,5 +29,6 @@ namespace GSEP
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<Maintenance> Maintenances { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+
     }
 }

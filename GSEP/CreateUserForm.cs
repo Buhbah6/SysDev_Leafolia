@@ -44,13 +44,7 @@ namespace GSEP
                 else
                     userNum++;
 
-                if (newAdmin)
-                {
-                    dbEntities.Database.ExecuteSqlCommand(createNewAdmin(dbEntities));
-                }
-                else
-                    dbEntities.Database.ExecuteSqlCommand(createEmployee(dbEntities));
-
+                dbEntities.Database.ExecuteSqlCommand(createEmployee(dbEntities, newAdmin));
                 fNameTextBox.Text = lNameTextBox.Text = depTextBox.Text = "";
             }
             else
@@ -58,50 +52,48 @@ namespace GSEP
                     "Empty Text Field Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private String createEmployee(ProjectDBEntities db)
+        private String createEmployee(ProjectDBEntities db, Boolean admin)
         {
             Random rnd = new Random();
             List<Employee> employeeList = db.Employees.ToList();
+            String tempID = "";
+            if (admin)
+            {
+                returnButton.Enabled = true;
+                LoginForm.currentEmployeeId = "00001";
+                String sql = "DELETE FROM Employees WHERE EmployeeID = '10101';";
+                db.Database.ExecuteSqlCommand(sql);
+                tempID = "00001";
+            }
+            else
+            {
+                tempID = (Convert.ToInt32(employeeList[employeeList.Count - 1].EmployeeID) + 1) + "";
+                for (int i = tempID.Length; i < 5; i++)
+                    tempID = "0" + tempID;
+            }
 
-            String tempID = (Convert.ToInt32(employeeList[employeeList.Count - 1].EmployeeID) + 1) + "";
-            for (int i = tempID.Length; i < 5; i++)
-                tempID = "0" + tempID;
-
-            String password = "defaultPass" + userNum + rnd.Next(1, 999);
+            String password = Employee.hashPassword("defaultPass" + userNum + rnd.Next(1, 999));
 
             String command = "INSERT INTO Employees(EmployeeID, Password, FirstName, LastName, Department, Permissions) " +
                 "VALUES ('" + tempID + "', '" + password + "', '" + fNameTextBox.Text + "', '" + lNameTextBox.Text +
                 "', '" + depTextBox.Text + "', '" + getPermissions() + "');";
 
-            MessageBox.Show(String.Format("Please provide this information to the user: \nEmployee ID: {0}\nPassword: {1}", tempID, password),
-                "Employee Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            return command;
-        }
-
-        private String createNewAdmin(ProjectDBEntities db)
-        {
-            Random rnd = new Random();
-            returnButton.Enabled = true;
-            LoginForm.currentEmployeeId = "00001";
-            
-            String sql = "DELETE FROM Employees WHERE EmployeeID = '10101';";
-            db.Database.ExecuteSqlCommand(sql);
-            
-            String password = "defaultPass" + userNum + rnd.Next(1, 999);
-            String command = "INSERT INTO Employees(EmployeeID, Password, FirstName, LastName, Department, Permissions) " +
-            "VALUES ('00001', '" + password + "', '" + fNameTextBox.Text + "', '" + lNameTextBox.Text +
-            "', '" + depTextBox.Text + "', '" + getPermissions() + "');";
-
-            MessageBox.Show(String.Format("Here is your new login info. Please retain it as it cannot be changed prior to login\nEmployee ID: {0}\nPassword: {1}", "00001", password), 
+            if (admin)
+            {
+                MessageBox.Show(String.Format("Here is your new login info. Please retain it as it cannot be changed prior to login\nEmployee ID: {0}\nPassword: {1}", "00001", password),
                 "Admin Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                changeProductsCheckBox.Checked = manageMaintenanceCheckBox.Checked = createUsersCheckBox.Checked =
+                passwordCheckBox.Checked = employeeViewCheckBox.Checked = manageSuppliesCheckBox.Checked = false;
+                permsGroupBox.Enabled = true;
+                depTextBox.Enabled = true;
 
-            changeProductsCheckBox.Checked = manageMaintenanceCheckBox.Checked = createUsersCheckBox.Checked =
-            passwordCheckBox.Checked = employeeViewCheckBox.Checked = manageSuppliesCheckBox.Checked = false;
-            permsGroupBox.Enabled = true;
-            depTextBox.Enabled = true;
-
-            newAdmin = false;
+                newAdmin = false;
+            }
+            else
+            {
+                MessageBox.Show(String.Format("Please provide this information to the user: \nEmployee ID: {0}\nPassword: {1}", tempID, password),
+                                "Employee Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             return command;
         }
 

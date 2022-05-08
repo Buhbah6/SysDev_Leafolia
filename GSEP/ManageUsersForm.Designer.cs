@@ -52,11 +52,24 @@
             this.viewEmployeesCheckBox = new System.Windows.Forms.CheckBox();
             this.createUsersCheckBox = new System.Windows.Forms.CheckBox();
             this.generatePasswordsCheckBox = new System.Windows.Forms.CheckBox();
+            this.employeesDataSet = new GSEP.EmployeesDataSet();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new GSEP.EmployeesDataSetTableAdapters.EmployeesTableAdapter();
+            this.tableAdapterManager = new GSEP.EmployeesDataSetTableAdapters.TableAdapterManager();
+            this.employeesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             employeeIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             departmentLabel = new System.Windows.Forms.Label();
             this.permsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // employeeIDLabel
@@ -117,7 +130,7 @@
             // 
             // editNameButton
             // 
-            this.editNameButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.editNameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.editNameButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.editNameButton.Location = new System.Drawing.Point(122, 252);
             this.editNameButton.Margin = new System.Windows.Forms.Padding(2);
@@ -130,7 +143,7 @@
             // 
             // changeDeptButton
             // 
-            this.changeDeptButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.changeDeptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.changeDeptButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.changeDeptButton.Location = new System.Drawing.Point(224, 252);
             this.changeDeptButton.Margin = new System.Windows.Forms.Padding(2);
@@ -143,7 +156,7 @@
             // 
             // resetPassButton
             // 
-            this.resetPassButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.resetPassButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.resetPassButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.resetPassButton.Location = new System.Drawing.Point(21, 252);
             this.resetPassButton.Margin = new System.Windows.Forms.Padding(2);
@@ -156,7 +169,7 @@
             // 
             // updatePermsButton
             // 
-            this.updatePermsButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.updatePermsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.updatePermsButton.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatePermsButton.Location = new System.Drawing.Point(341, 313);
             this.updatePermsButton.Margin = new System.Windows.Forms.Padding(2);
@@ -169,7 +182,7 @@
             // 
             // deleteUserButton
             // 
-            this.deleteUserButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.deleteUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.deleteUserButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUserButton.Location = new System.Drawing.Point(22, 313);
             this.deleteUserButton.Margin = new System.Windows.Forms.Padding(2);
@@ -183,7 +196,7 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.titleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titleLabel.Font = new System.Drawing.Font("Tahoma", 38F, System.Drawing.FontStyle.Underline);
             this.titleLabel.Location = new System.Drawing.Point(251, 7);
@@ -229,7 +242,7 @@
             // 
             // menuButton
             // 
-            this.menuButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Sitka Banner", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.Location = new System.Drawing.Point(767, 0);
@@ -243,7 +256,7 @@
             // 
             // permsGroupBox
             // 
-            this.permsGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.permsGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.permsGroupBox.Controls.Add(this.changeSuppliesCheckBox);
             this.permsGroupBox.Controls.Add(this.changeProductsCheckBox);
             this.permsGroupBox.Controls.Add(this.manageMaintenanceCheckBox);
@@ -333,12 +346,81 @@
             this.generatePasswordsCheckBox.Text = "Generate Passwords";
             this.generatePasswordsCheckBox.UseVisualStyleBackColor = true;
             // 
+            // employeesDataSet
+            // 
+            this.employeesDataSet.DataSetName = "EmployeesDataSet";
+            this.employeesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.employeesDataSet;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EmployeesTableAdapter = this.employeesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = GSEP.EmployeesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // employeesDataGridView
+            // 
+            this.employeesDataGridView.AutoGenerateColumns = false;
+            this.employeesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
+            this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.employeesDataGridView.DataSource = this.employeesBindingSource;
+            this.employeesDataGridView.Location = new System.Drawing.Point(537, 87);
+            this.employeesDataGridView.Name = "employeesDataGridView";
+            this.employeesDataGridView.Size = new System.Drawing.Size(302, 261);
+            this.employeesDataGridView.TabIndex = 62;
+            this.employeesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Department";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Permissions";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Permissions";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // ManageUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
             this.ClientSize = new System.Drawing.Size(863, 362);
+            this.Controls.Add(this.employeesDataGridView);
             this.Controls.Add(this.permsGroupBox);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.depTextBox);
@@ -362,6 +444,9 @@
             this.Load += new System.EventHandler(this.ManageUsersForm_Load);
             this.permsGroupBox.ResumeLayout(false);
             this.permsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +473,15 @@
         private System.Windows.Forms.CheckBox viewEmployeesCheckBox;
         private System.Windows.Forms.CheckBox createUsersCheckBox;
         private System.Windows.Forms.CheckBox generatePasswordsCheckBox;
+        private EmployeesDataSet employeesDataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private EmployeesDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        private EmployeesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView employeesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

@@ -33,11 +33,11 @@ namespace GSEP
             }
 
             if (perms.ElementAt(1) == '0')
+                manageMaintenanceButton.Enabled = false;
+            if (perms.ElementAt(2) == '0')
                 createUsersButton.Enabled = false;
             if (perms.ElementAt(4) == '0')
                 manageUsersButton.Enabled = false;
-            if (perms.ElementAt(5) == '0')
-                manageMaintenanceButton.Enabled = false;
         }
 
         private void createUsersButton_Click(object sender, EventArgs e)

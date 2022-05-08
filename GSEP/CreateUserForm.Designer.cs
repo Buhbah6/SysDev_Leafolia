@@ -63,7 +63,7 @@
             // 
             this.fNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fNameTextBox.Location = new System.Drawing.Point(165, 89);
-            this.fNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.fNameTextBox.Multiline = true;
             this.fNameTextBox.Name = "fNameTextBox";
             this.fNameTextBox.Size = new System.Drawing.Size(280, 22);
@@ -71,16 +71,17 @@
             // 
             // createButton
             // 
+            this.createButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.createButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createButton.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createButton.Location = new System.Drawing.Point(52, 232);
-            this.createButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createButton.Margin = new System.Windows.Forms.Padding(2);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(392, 41);
             this.createButton.TabIndex = 5;
             this.createButton.Text = "Create";
             this.createButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.UseVisualStyleBackColor = false;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // label2
@@ -120,7 +121,7 @@
             // 
             this.lNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lNameTextBox.Location = new System.Drawing.Point(165, 137);
-            this.lNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lNameTextBox.Multiline = true;
             this.lNameTextBox.Name = "lNameTextBox";
             this.lNameTextBox.Size = new System.Drawing.Size(280, 22);
@@ -130,7 +131,7 @@
             // 
             this.depTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depTextBox.Location = new System.Drawing.Point(165, 188);
-            this.depTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.depTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.depTextBox.Multiline = true;
             this.depTextBox.Name = "depTextBox";
             this.depTextBox.Size = new System.Drawing.Size(280, 22);
@@ -138,7 +139,7 @@
             // 
             // permsGroupBox
             // 
-            this.permsGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.permsGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.permsGroupBox.Controls.Add(this.manageSuppliesCheckBox);
             this.permsGroupBox.Controls.Add(this.changeProductsCheckBox);
             this.permsGroupBox.Controls.Add(this.manageMaintenanceCheckBox);
@@ -148,9 +149,9 @@
             this.permsGroupBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.permsGroupBox.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.permsGroupBox.Location = new System.Drawing.Point(464, 89);
-            this.permsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.permsGroupBox.Name = "permsGroupBox";
-            this.permsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permsGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.permsGroupBox.Size = new System.Drawing.Size(161, 154);
             this.permsGroupBox.TabIndex = 13;
             this.permsGroupBox.TabStop = false;
@@ -161,7 +162,7 @@
             this.manageSuppliesCheckBox.AutoSize = true;
             this.manageSuppliesCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageSuppliesCheckBox.Location = new System.Drawing.Point(4, 123);
-            this.manageSuppliesCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manageSuppliesCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.manageSuppliesCheckBox.Name = "manageSuppliesCheckBox";
             this.manageSuppliesCheckBox.Size = new System.Drawing.Size(147, 24);
             this.manageSuppliesCheckBox.TabIndex = 5;
@@ -173,7 +174,7 @@
             this.changeProductsCheckBox.AutoSize = true;
             this.changeProductsCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeProductsCheckBox.Location = new System.Drawing.Point(4, 17);
-            this.changeProductsCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changeProductsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.changeProductsCheckBox.Name = "changeProductsCheckBox";
             this.changeProductsCheckBox.Size = new System.Drawing.Size(148, 24);
             this.changeProductsCheckBox.TabIndex = 0;
@@ -185,7 +186,7 @@
             this.manageMaintenanceCheckBox.AutoSize = true;
             this.manageMaintenanceCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageMaintenanceCheckBox.Location = new System.Drawing.Point(4, 38);
-            this.manageMaintenanceCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manageMaintenanceCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.manageMaintenanceCheckBox.Name = "manageMaintenanceCheckBox";
             this.manageMaintenanceCheckBox.Size = new System.Drawing.Size(141, 24);
             this.manageMaintenanceCheckBox.TabIndex = 1;
@@ -197,7 +198,7 @@
             this.employeeViewCheckBox.AutoSize = true;
             this.employeeViewCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeViewCheckBox.Location = new System.Drawing.Point(4, 102);
-            this.employeeViewCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeViewCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.employeeViewCheckBox.Name = "employeeViewCheckBox";
             this.employeeViewCheckBox.Size = new System.Drawing.Size(115, 24);
             this.employeeViewCheckBox.TabIndex = 4;
@@ -209,7 +210,7 @@
             this.createUsersCheckBox.AutoSize = true;
             this.createUsersCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUsersCheckBox.Location = new System.Drawing.Point(4, 59);
-            this.createUsersCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createUsersCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.createUsersCheckBox.Name = "createUsersCheckBox";
             this.createUsersCheckBox.Size = new System.Drawing.Size(96, 24);
             this.createUsersCheckBox.TabIndex = 2;
@@ -221,7 +222,7 @@
             this.passwordCheckBox.AutoSize = true;
             this.passwordCheckBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordCheckBox.Location = new System.Drawing.Point(4, 80);
-            this.passwordCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordCheckBox.Name = "passwordCheckBox";
             this.passwordCheckBox.Size = new System.Drawing.Size(136, 24);
             this.passwordCheckBox.TabIndex = 3;
@@ -230,11 +231,11 @@
             // 
             // returnButton
             // 
-            this.returnButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.returnButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.returnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnButton.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnButton.Location = new System.Drawing.Point(21, 347);
-            this.returnButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.returnButton.Margin = new System.Windows.Forms.Padding(2);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(179, 46);
             this.returnButton.TabIndex = 14;
@@ -245,6 +246,7 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Sitka Display Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(240, 316);
@@ -260,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
             this.ClientSize = new System.Drawing.Size(655, 421);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.returnButton);
@@ -273,7 +275,7 @@
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.fNameTextBox);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateUserForm";
             this.Text = "Create User";
             this.Load += new System.EventHandler(this.CreateUserForm_Load);

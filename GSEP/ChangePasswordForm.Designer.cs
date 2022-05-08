@@ -44,7 +44,7 @@
             // 
             // menuButton
             // 
-            this.menuButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Sitka Banner", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.Location = new System.Drawing.Point(571, 1);
@@ -58,6 +58,7 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(516, 96);
@@ -97,6 +98,7 @@
             // 
             // confirmButton
             // 
+            this.confirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmButton.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.Location = new System.Drawing.Point(139, 295);
@@ -106,7 +108,7 @@
             this.confirmButton.TabIndex = 69;
             this.confirmButton.Text = "Confirm Change";
             this.confirmButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // label4
@@ -190,6 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
             this.ClientSize = new System.Drawing.Size(667, 400);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.label5);

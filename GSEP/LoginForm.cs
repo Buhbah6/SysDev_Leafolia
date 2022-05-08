@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace GSEP
@@ -39,6 +40,7 @@ namespace GSEP
             
             List<Employee> employeeList = loginReqs.Employees.ToList();
             List<Login> loginList = loginReqs.Logins.ToList();
+
             for (int i = 0; i < employeeList.Count; i++)
             {
                 if (employeeList[i].EmployeeID.Equals(usernameTextBox.Text))
@@ -52,21 +54,17 @@ namespace GSEP
                             attempts = log.FailedLogins;
                         }
                     }
+
                     if (successfulLogin)
                     {
                         errorLabel.Text = "";
                         canLogin = true;
                     }
+
+                    //if (Employee.unHashPassword(employeeList[i].Password, passwordTextBox.Text) && canLogin)
                     if (employeeList[i].Password.Equals(passwordTextBox.Text) && canLogin)
                     {
                         currentEmployeeId = employeeList[i].EmployeeID;
-                        /*
-                        if (successfulLogin == false && attempts < 3)
-                        {
-                            loginReqs.Database.ExecuteSqlCommand("UPDATE Logins SET FailedLogins = REPLACE(" + attempts + ", " +
-                                    attempts + ", " + 0 + ") WHERE EmployeeID = '" + usernameTextBox.Text + "';");
-                        }
-                        */
                         if (usernameTextBox.Text.Equals("10101") && passwordTextBox.Text.Equals("ownerPass"))
                         {
                             CreateUserForm cuf = new CreateUserForm();
@@ -125,5 +123,6 @@ namespace GSEP
         {
             currentEmployeeId = null;
         }
+
     }
 }

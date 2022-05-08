@@ -24,5 +24,11 @@ namespace GSEP
             mmf.ShowDialog();
             this.Close();
         }
+
+        private void ViewMaintenance_Load(object sender, EventArgs e)
+        {
+            this.maintenanceTableAdapter.Fill(this.maintenanceDataSet.Maintenance);
+
+        }
     }
 }

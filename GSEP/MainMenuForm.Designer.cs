@@ -41,7 +41,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.PaleGreen;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(219)))), ((int)(((byte)(132)))));
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 25);
@@ -54,7 +54,7 @@
             // 
             // createUsersButton
             // 
-            this.createUsersButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.createUsersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.createUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.createUsersButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUsersButton.ForeColor = System.Drawing.Color.Black;
@@ -69,7 +69,7 @@
             // 
             // changePasswordButton
             // 
-            this.changePasswordButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.changePasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.changePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.changePasswordButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePasswordButton.ForeColor = System.Drawing.Color.Black;
@@ -84,7 +84,7 @@
             // 
             // manageMaintenanceButton
             // 
-            this.manageMaintenanceButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageMaintenanceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.manageMaintenanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageMaintenanceButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageMaintenanceButton.ForeColor = System.Drawing.Color.Black;
@@ -99,7 +99,7 @@
             // 
             // manageUsersButton
             // 
-            this.manageUsersButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageUsersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.manageUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageUsersButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageUsersButton.ForeColor = System.Drawing.Color.Black;
@@ -114,7 +114,7 @@
             // 
             // manageProductsButton
             // 
-            this.manageProductsButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageProductsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.manageProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageProductsButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageProductsButton.ForeColor = System.Drawing.Color.Black;
@@ -129,7 +129,7 @@
             // 
             // manageSuppliesButton
             // 
-            this.manageSuppliesButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageSuppliesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
             this.manageSuppliesButton.Enabled = false;
             this.manageSuppliesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageSuppliesButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,7 +144,7 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.Tomato;
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.White;
@@ -159,7 +159,7 @@
             // 
             // calendarButton
             // 
-            this.calendarButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.calendarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(112)))), ((int)(((byte)(29)))));
             this.calendarButton.Enabled = false;
             this.calendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.calendarButton.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
             this.ClientSize = new System.Drawing.Size(584, 645);
             this.Controls.Add(this.calendarButton);
             this.Controls.Add(this.logoutButton);
