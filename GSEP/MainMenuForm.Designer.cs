@@ -30,12 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.createUsersButton = new System.Windows.Forms.Button();
-            this.posButton = new System.Windows.Forms.Button();
             this.changePasswordButton = new System.Windows.Forms.Button();
+            this.manageMaintenanceButton = new System.Windows.Forms.Button();
             this.manageUsersButton = new System.Windows.Forms.Button();
             this.manageProductsButton = new System.Windows.Forms.Button();
-            this.transactionViewButton = new System.Windows.Forms.Button();
+            this.manageSuppliesButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.calendarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,9 +44,10 @@
             this.label1.BackColor = System.Drawing.Color.PaleGreen;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 31);
+            this.label1.Location = new System.Drawing.Point(46, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(655, 99);
+            this.label1.Size = new System.Drawing.Size(492, 81);
             this.label1.TabIndex = 1;
             this.label1.Text = "Main Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,27 +58,14 @@
             this.createUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.createUsersButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUsersButton.ForeColor = System.Drawing.Color.Black;
-            this.createUsersButton.Location = new System.Drawing.Point(61, 160);
+            this.createUsersButton.Location = new System.Drawing.Point(46, 130);
+            this.createUsersButton.Margin = new System.Windows.Forms.Padding(2);
             this.createUsersButton.Name = "createUsersButton";
-            this.createUsersButton.Size = new System.Drawing.Size(287, 114);
+            this.createUsersButton.Size = new System.Drawing.Size(215, 93);
             this.createUsersButton.TabIndex = 2;
             this.createUsersButton.Text = "Create Users";
             this.createUsersButton.UseVisualStyleBackColor = false;
             this.createUsersButton.Click += new System.EventHandler(this.createUsersButton_Click);
-            // 
-            // posButton
-            // 
-            this.posButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.posButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.posButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posButton.ForeColor = System.Drawing.Color.Black;
-            this.posButton.Location = new System.Drawing.Point(429, 160);
-            this.posButton.Name = "posButton";
-            this.posButton.Size = new System.Drawing.Size(287, 114);
-            this.posButton.TabIndex = 3;
-            this.posButton.Text = "Access POS";
-            this.posButton.UseVisualStyleBackColor = false;
-            this.posButton.Click += new System.EventHandler(this.posButton_Click);
             // 
             // changePasswordButton
             // 
@@ -84,13 +73,29 @@
             this.changePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.changePasswordButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePasswordButton.ForeColor = System.Drawing.Color.Black;
-            this.changePasswordButton.Location = new System.Drawing.Point(429, 321);
+            this.changePasswordButton.Location = new System.Drawing.Point(322, 130);
+            this.changePasswordButton.Margin = new System.Windows.Forms.Padding(2);
             this.changePasswordButton.Name = "changePasswordButton";
-            this.changePasswordButton.Size = new System.Drawing.Size(287, 114);
-            this.changePasswordButton.TabIndex = 4;
+            this.changePasswordButton.Size = new System.Drawing.Size(215, 93);
+            this.changePasswordButton.TabIndex = 3;
             this.changePasswordButton.Text = "Change Password";
             this.changePasswordButton.UseVisualStyleBackColor = false;
             this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
+            // 
+            // manageMaintenanceButton
+            // 
+            this.manageMaintenanceButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageMaintenanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.manageMaintenanceButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageMaintenanceButton.ForeColor = System.Drawing.Color.Black;
+            this.manageMaintenanceButton.Location = new System.Drawing.Point(322, 261);
+            this.manageMaintenanceButton.Margin = new System.Windows.Forms.Padding(2);
+            this.manageMaintenanceButton.Name = "manageMaintenanceButton";
+            this.manageMaintenanceButton.Size = new System.Drawing.Size(215, 93);
+            this.manageMaintenanceButton.TabIndex = 4;
+            this.manageMaintenanceButton.Text = "Manage Plant Maintenance";
+            this.manageMaintenanceButton.UseVisualStyleBackColor = false;
+            this.manageMaintenanceButton.Click += new System.EventHandler(this.manageMaintenanceButton_Click);
             // 
             // manageUsersButton
             // 
@@ -98,9 +103,10 @@
             this.manageUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageUsersButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageUsersButton.ForeColor = System.Drawing.Color.Black;
-            this.manageUsersButton.Location = new System.Drawing.Point(61, 321);
+            this.manageUsersButton.Location = new System.Drawing.Point(46, 261);
+            this.manageUsersButton.Margin = new System.Windows.Forms.Padding(2);
             this.manageUsersButton.Name = "manageUsersButton";
-            this.manageUsersButton.Size = new System.Drawing.Size(287, 114);
+            this.manageUsersButton.Size = new System.Drawing.Size(215, 93);
             this.manageUsersButton.TabIndex = 5;
             this.manageUsersButton.Text = "Manage Users";
             this.manageUsersButton.UseVisualStyleBackColor = false;
@@ -112,27 +118,29 @@
             this.manageProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.manageProductsButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageProductsButton.ForeColor = System.Drawing.Color.Black;
-            this.manageProductsButton.Location = new System.Drawing.Point(61, 481);
+            this.manageProductsButton.Location = new System.Drawing.Point(46, 391);
+            this.manageProductsButton.Margin = new System.Windows.Forms.Padding(2);
             this.manageProductsButton.Name = "manageProductsButton";
-            this.manageProductsButton.Size = new System.Drawing.Size(287, 114);
+            this.manageProductsButton.Size = new System.Drawing.Size(215, 93);
             this.manageProductsButton.TabIndex = 6;
             this.manageProductsButton.Text = "View/Manage Products";
             this.manageProductsButton.UseVisualStyleBackColor = false;
             this.manageProductsButton.Click += new System.EventHandler(this.manageProductsButton_Click);
             // 
-            // transactionViewButton
+            // manageSuppliesButton
             // 
-            this.transactionViewButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.transactionViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.transactionViewButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionViewButton.ForeColor = System.Drawing.Color.Black;
-            this.transactionViewButton.Location = new System.Drawing.Point(429, 481);
-            this.transactionViewButton.Name = "transactionViewButton";
-            this.transactionViewButton.Size = new System.Drawing.Size(287, 114);
-            this.transactionViewButton.TabIndex = 7;
-            this.transactionViewButton.Text = "View Transactions";
-            this.transactionViewButton.UseVisualStyleBackColor = false;
-            this.transactionViewButton.Click += new System.EventHandler(this.transactionViewButton_Click);
+            this.manageSuppliesButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.manageSuppliesButton.Enabled = false;
+            this.manageSuppliesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.manageSuppliesButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageSuppliesButton.ForeColor = System.Drawing.Color.Black;
+            this.manageSuppliesButton.Location = new System.Drawing.Point(322, 391);
+            this.manageSuppliesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.manageSuppliesButton.Name = "manageSuppliesButton";
+            this.manageSuppliesButton.Size = new System.Drawing.Size(215, 93);
+            this.manageSuppliesButton.TabIndex = 7;
+            this.manageSuppliesButton.Text = "View/Manage Supplies";
+            this.manageSuppliesButton.UseVisualStyleBackColor = false;
             // 
             // logoutButton
             // 
@@ -140,28 +148,46 @@
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(61, 624);
+            this.logoutButton.Location = new System.Drawing.Point(46, 569);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(655, 67);
+            this.logoutButton.Size = new System.Drawing.Size(491, 54);
             this.logoutButton.TabIndex = 8;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // calendarButton
+            // 
+            this.calendarButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.calendarButton.Enabled = false;
+            this.calendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.calendarButton.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendarButton.ForeColor = System.Drawing.Color.White;
+            this.calendarButton.Location = new System.Drawing.Point(46, 500);
+            this.calendarButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calendarButton.Name = "calendarButton";
+            this.calendarButton.Size = new System.Drawing.Size(491, 54);
+            this.calendarButton.TabIndex = 9;
+            this.calendarButton.Text = "View Calendar";
+            this.calendarButton.UseVisualStyleBackColor = false;
+            // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(778, 726);
+            this.ClientSize = new System.Drawing.Size(584, 645);
+            this.Controls.Add(this.calendarButton);
             this.Controls.Add(this.logoutButton);
-            this.Controls.Add(this.transactionViewButton);
+            this.Controls.Add(this.manageSuppliesButton);
             this.Controls.Add(this.manageProductsButton);
             this.Controls.Add(this.manageUsersButton);
+            this.Controls.Add(this.manageMaintenanceButton);
             this.Controls.Add(this.changePasswordButton);
-            this.Controls.Add(this.posButton);
             this.Controls.Add(this.createUsersButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenuForm";
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
@@ -173,11 +199,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button createUsersButton;
-        private System.Windows.Forms.Button posButton;
         private System.Windows.Forms.Button changePasswordButton;
+        private System.Windows.Forms.Button manageMaintenanceButton;
         private System.Windows.Forms.Button manageUsersButton;
         private System.Windows.Forms.Button manageProductsButton;
-        private System.Windows.Forms.Button transactionViewButton;
+        private System.Windows.Forms.Button manageSuppliesButton;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button calendarButton;
     }
 }

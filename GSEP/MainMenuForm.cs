@@ -20,9 +20,8 @@ namespace GSEP
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
             createUsersButton.Enabled = true;
-            posButton.Enabled = true;
             manageUsersButton.Enabled = true;
-            transactionViewButton.Enabled = true;
+            manageMaintenanceButton.Enabled = true;
 
             var permEntities = new ProjectDBEntities();
             List<Employee> employeeList = permEntities.Employees.ToList();
@@ -35,12 +34,10 @@ namespace GSEP
 
             if (perms.ElementAt(1) == '0')
                 createUsersButton.Enabled = false;
-            if (perms.ElementAt(2) == '0')
-                posButton.Enabled = false;
             if (perms.ElementAt(4) == '0')
                 manageUsersButton.Enabled = false;
             if (perms.ElementAt(5) == '0')
-                transactionViewButton.Enabled = false;
+                manageMaintenanceButton.Enabled = false;
         }
 
         private void createUsersButton_Click(object sender, EventArgs e)
@@ -61,33 +58,17 @@ namespace GSEP
 
         private void manageProductsButton_Click(object sender, EventArgs e)
         {
-            ViewProductsForm vpf = new ViewProductsForm();
+            ViewProducts vpf = new ViewProducts();
             this.Hide();
             vpf.ShowDialog();
             this.Close();
         }
 
-        private void posButton_Click(object sender, EventArgs e)
+        private void manageMaintenanceButton_Click(object sender, EventArgs e)
         {
-            POSForm pf = new POSForm();
+            ViewMaintenance vm = new ViewMaintenance();
             this.Hide();
-            pf.ShowDialog();
-            this.Close();
-        }
-
-        private void changePasswordButton_Click(object sender, EventArgs e)
-        {
-            ChangePasswordForm cpf = new ChangePasswordForm();
-            this.Hide();
-            cpf.ShowDialog();
-            this.Close();
-        }
-
-        private void transactionViewButton_Click(object sender, EventArgs e)
-        {
-            ViewTransactionsForm vtf = new ViewTransactionsForm();
-            this.Hide();
-            vtf.ShowDialog();
+            vm.ShowDialog();
             this.Close();
         }
 
@@ -99,6 +80,12 @@ namespace GSEP
             this.Close();
         }
 
-        
+        private void changePasswordButton_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm cf = new ChangePasswordForm();
+            this.Hide();
+            cf.ShowDialog();
+            this.Close();
+        }
     }
 }

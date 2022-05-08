@@ -46,39 +46,27 @@
             this.depTextBox = new System.Windows.Forms.TextBox();
             this.menuButton = new System.Windows.Forms.Button();
             this.permsGroupBox = new System.Windows.Forms.GroupBox();
-            this.transactionViewCheckBox = new System.Windows.Forms.CheckBox();
+            this.changeSuppliesCheckBox = new System.Windows.Forms.CheckBox();
             this.changeProductsCheckBox = new System.Windows.Forms.CheckBox();
-            this.createUserCheckBox = new System.Windows.Forms.CheckBox();
-            this.employeeViewCheckBox = new System.Windows.Forms.CheckBox();
-            this.transactionCheckBox = new System.Windows.Forms.CheckBox();
-            this.passwordCheckBox = new System.Windows.Forms.CheckBox();
-            this.employeesDataSet = new GSEP.EmployeesDataSet();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesTableAdapter = new GSEP.EmployeesDataSetTableAdapters.EmployeesTableAdapter();
-            this.tableAdapterManager = new GSEP.EmployeesDataSetTableAdapters.TableAdapterManager();
-            this.employeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manageMaintenanceCheckBox = new System.Windows.Forms.CheckBox();
+            this.viewEmployeesCheckBox = new System.Windows.Forms.CheckBox();
+            this.createUsersCheckBox = new System.Windows.Forms.CheckBox();
+            this.generatePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             employeeIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             departmentLabel = new System.Windows.Forms.Label();
             this.permsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // employeeIDLabel
             // 
             employeeIDLabel.AutoSize = true;
             employeeIDLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            employeeIDLabel.Location = new System.Drawing.Point(24, 144);
+            employeeIDLabel.Location = new System.Drawing.Point(18, 117);
+            employeeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             employeeIDLabel.Name = "employeeIDLabel";
-            employeeIDLabel.Size = new System.Drawing.Size(153, 39);
+            employeeIDLabel.Size = new System.Drawing.Size(126, 32);
             employeeIDLabel.TabIndex = 42;
             employeeIDLabel.Text = "Employee ID:";
             // 
@@ -86,9 +74,10 @@
             // 
             firstNameLabel.AutoSize = true;
             firstNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            firstNameLabel.Location = new System.Drawing.Point(40, 183);
+            firstNameLabel.Location = new System.Drawing.Point(30, 149);
+            firstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(137, 39);
+            firstNameLabel.Size = new System.Drawing.Size(112, 32);
             firstNameLabel.TabIndex = 46;
             firstNameLabel.Text = "First Name:";
             // 
@@ -96,9 +85,10 @@
             // 
             lastNameLabel.AutoSize = true;
             lastNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lastNameLabel.Location = new System.Drawing.Point(44, 222);
+            lastNameLabel.Location = new System.Drawing.Point(33, 180);
+            lastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(133, 39);
+            lastNameLabel.Size = new System.Drawing.Size(108, 32);
             lastNameLabel.TabIndex = 48;
             lastNameLabel.Text = "Last Name:";
             // 
@@ -106,18 +96,20 @@
             // 
             departmentLabel.AutoSize = true;
             departmentLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            departmentLabel.Location = new System.Drawing.Point(29, 257);
+            departmentLabel.Location = new System.Drawing.Point(22, 209);
+            departmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             departmentLabel.Name = "departmentLabel";
-            departmentLabel.Size = new System.Drawing.Size(148, 39);
+            departmentLabel.Size = new System.Drawing.Size(119, 32);
             departmentLabel.TabIndex = 50;
             departmentLabel.Text = "Department:";
             // 
             // instructionsLabel
             // 
             this.instructionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructionsLabel.Location = new System.Drawing.Point(28, 107);
+            this.instructionsLabel.Location = new System.Drawing.Point(21, 87);
+            this.instructionsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.instructionsLabel.Name = "instructionsLabel";
-            this.instructionsLabel.Size = new System.Drawing.Size(667, 32);
+            this.instructionsLabel.Size = new System.Drawing.Size(500, 26);
             this.instructionsLabel.TabIndex = 42;
             this.instructionsLabel.Text = "Please enter an employee ID along with the information you want changed then pres" +
     "s the corresponding button.";
@@ -126,10 +118,11 @@
             // editNameButton
             // 
             this.editNameButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.editNameButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editNameButton.Location = new System.Drawing.Point(162, 310);
+            this.editNameButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.editNameButton.Location = new System.Drawing.Point(122, 252);
+            this.editNameButton.Margin = new System.Windows.Forms.Padding(2);
             this.editNameButton.Name = "editNameButton";
-            this.editNameButton.Size = new System.Drawing.Size(131, 69);
+            this.editNameButton.Size = new System.Drawing.Size(98, 56);
             this.editNameButton.TabIndex = 41;
             this.editNameButton.Text = "Edit Name";
             this.editNameButton.UseVisualStyleBackColor = false;
@@ -138,10 +131,11 @@
             // changeDeptButton
             // 
             this.changeDeptButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.changeDeptButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeDeptButton.Location = new System.Drawing.Point(299, 310);
+            this.changeDeptButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.changeDeptButton.Location = new System.Drawing.Point(224, 252);
+            this.changeDeptButton.Margin = new System.Windows.Forms.Padding(2);
             this.changeDeptButton.Name = "changeDeptButton";
-            this.changeDeptButton.Size = new System.Drawing.Size(127, 69);
+            this.changeDeptButton.Size = new System.Drawing.Size(95, 56);
             this.changeDeptButton.TabIndex = 40;
             this.changeDeptButton.Text = "Change Department";
             this.changeDeptButton.UseVisualStyleBackColor = false;
@@ -150,10 +144,11 @@
             // resetPassButton
             // 
             this.resetPassButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.resetPassButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetPassButton.Location = new System.Drawing.Point(28, 310);
+            this.resetPassButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.resetPassButton.Location = new System.Drawing.Point(21, 252);
+            this.resetPassButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetPassButton.Name = "resetPassButton";
-            this.resetPassButton.Size = new System.Drawing.Size(128, 69);
+            this.resetPassButton.Size = new System.Drawing.Size(96, 56);
             this.resetPassButton.TabIndex = 39;
             this.resetPassButton.Text = "Reset Password";
             this.resetPassButton.UseVisualStyleBackColor = false;
@@ -163,9 +158,10 @@
             // 
             this.updatePermsButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.updatePermsButton.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatePermsButton.Location = new System.Drawing.Point(455, 385);
+            this.updatePermsButton.Location = new System.Drawing.Point(341, 313);
+            this.updatePermsButton.Margin = new System.Windows.Forms.Padding(2);
             this.updatePermsButton.Name = "updatePermsButton";
-            this.updatePermsButton.Size = new System.Drawing.Size(240, 43);
+            this.updatePermsButton.Size = new System.Drawing.Size(180, 35);
             this.updatePermsButton.TabIndex = 38;
             this.updatePermsButton.Text = "Update Permissions";
             this.updatePermsButton.UseVisualStyleBackColor = false;
@@ -175,9 +171,10 @@
             // 
             this.deleteUserButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.deleteUserButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteUserButton.Location = new System.Drawing.Point(29, 385);
+            this.deleteUserButton.Location = new System.Drawing.Point(22, 313);
+            this.deleteUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(397, 43);
+            this.deleteUserButton.Size = new System.Drawing.Size(298, 35);
             this.deleteUserButton.TabIndex = 37;
             this.deleteUserButton.Text = "Delete User";
             this.deleteUserButton.UseVisualStyleBackColor = false;
@@ -189,40 +186,45 @@
             this.titleLabel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.titleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titleLabel.Font = new System.Drawing.Font("Tahoma", 38F, System.Drawing.FontStyle.Underline);
-            this.titleLabel.Location = new System.Drawing.Point(335, 9);
+            this.titleLabel.Location = new System.Drawing.Point(251, 7);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(434, 79);
+            this.titleLabel.Size = new System.Drawing.Size(345, 64);
             this.titleLabel.TabIndex = 22;
             this.titleLabel.Text = "Manage Users";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // empIDTextBox
             // 
-            this.empIDTextBox.Location = new System.Drawing.Point(187, 159);
+            this.empIDTextBox.Location = new System.Drawing.Point(140, 129);
+            this.empIDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.empIDTextBox.Name = "empIDTextBox";
-            this.empIDTextBox.Size = new System.Drawing.Size(239, 22);
+            this.empIDTextBox.Size = new System.Drawing.Size(180, 20);
             this.empIDTextBox.TabIndex = 53;
             this.empIDTextBox.TextChanged += new System.EventHandler(this.empIDTextBox_TextChanged);
             // 
             // fNameTextBox
             // 
-            this.fNameTextBox.Location = new System.Drawing.Point(187, 197);
+            this.fNameTextBox.Location = new System.Drawing.Point(140, 160);
+            this.fNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.fNameTextBox.Name = "fNameTextBox";
-            this.fNameTextBox.Size = new System.Drawing.Size(239, 22);
+            this.fNameTextBox.Size = new System.Drawing.Size(180, 20);
             this.fNameTextBox.TabIndex = 55;
             // 
             // lNameTextBox
             // 
-            this.lNameTextBox.Location = new System.Drawing.Point(187, 235);
+            this.lNameTextBox.Location = new System.Drawing.Point(140, 191);
+            this.lNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lNameTextBox.Name = "lNameTextBox";
-            this.lNameTextBox.Size = new System.Drawing.Size(239, 22);
+            this.lNameTextBox.Size = new System.Drawing.Size(180, 20);
             this.lNameTextBox.TabIndex = 56;
             // 
             // depTextBox
             // 
-            this.depTextBox.Location = new System.Drawing.Point(187, 272);
+            this.depTextBox.Location = new System.Drawing.Point(140, 221);
+            this.depTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.depTextBox.Name = "depTextBox";
-            this.depTextBox.Size = new System.Drawing.Size(239, 22);
+            this.depTextBox.Size = new System.Drawing.Size(180, 20);
             this.depTextBox.TabIndex = 57;
             // 
             // menuButton
@@ -230,9 +232,10 @@
             this.menuButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Sitka Banner", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.Location = new System.Drawing.Point(1023, 0);
+            this.menuButton.Location = new System.Drawing.Point(767, 0);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(2);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(127, 38);
+            this.menuButton.Size = new System.Drawing.Size(95, 31);
             this.menuButton.TabIndex = 60;
             this.menuButton.Text = "Return to Menu";
             this.menuButton.UseVisualStyleBackColor = false;
@@ -241,178 +244,101 @@
             // permsGroupBox
             // 
             this.permsGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.permsGroupBox.Controls.Add(this.transactionViewCheckBox);
+            this.permsGroupBox.Controls.Add(this.changeSuppliesCheckBox);
             this.permsGroupBox.Controls.Add(this.changeProductsCheckBox);
-            this.permsGroupBox.Controls.Add(this.createUserCheckBox);
-            this.permsGroupBox.Controls.Add(this.employeeViewCheckBox);
-            this.permsGroupBox.Controls.Add(this.transactionCheckBox);
-            this.permsGroupBox.Controls.Add(this.passwordCheckBox);
+            this.permsGroupBox.Controls.Add(this.manageMaintenanceCheckBox);
+            this.permsGroupBox.Controls.Add(this.viewEmployeesCheckBox);
+            this.permsGroupBox.Controls.Add(this.createUsersCheckBox);
+            this.permsGroupBox.Controls.Add(this.generatePasswordsCheckBox);
             this.permsGroupBox.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.permsGroupBox.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
-            this.permsGroupBox.Location = new System.Drawing.Point(456, 159);
+            this.permsGroupBox.Location = new System.Drawing.Point(342, 129);
+            this.permsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.permsGroupBox.Name = "permsGroupBox";
-            this.permsGroupBox.Size = new System.Drawing.Size(239, 220);
+            this.permsGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.permsGroupBox.Size = new System.Drawing.Size(179, 179);
             this.permsGroupBox.TabIndex = 61;
             this.permsGroupBox.TabStop = false;
             this.permsGroupBox.Text = "Permissions";
             // 
-            // transactionViewCheckBox
+            // changeSuppliesCheckBox
             // 
-            this.transactionViewCheckBox.AutoSize = true;
-            this.transactionViewCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionViewCheckBox.Location = new System.Drawing.Point(6, 151);
-            this.transactionViewCheckBox.Name = "transactionViewCheckBox";
-            this.transactionViewCheckBox.Size = new System.Drawing.Size(175, 33);
-            this.transactionViewCheckBox.TabIndex = 5;
-            this.transactionViewCheckBox.Text = "View Transactions";
-            this.transactionViewCheckBox.UseVisualStyleBackColor = true;
+            this.changeSuppliesCheckBox.AutoSize = true;
+            this.changeSuppliesCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeSuppliesCheckBox.Location = new System.Drawing.Point(4, 123);
+            this.changeSuppliesCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.changeSuppliesCheckBox.Name = "changeSuppliesCheckBox";
+            this.changeSuppliesCheckBox.Size = new System.Drawing.Size(166, 27);
+            this.changeSuppliesCheckBox.TabIndex = 5;
+            this.changeSuppliesCheckBox.Text = "Add/Remove Supplies";
+            this.changeSuppliesCheckBox.UseVisualStyleBackColor = true;
             // 
             // changeProductsCheckBox
             // 
             this.changeProductsCheckBox.AutoSize = true;
             this.changeProductsCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeProductsCheckBox.Location = new System.Drawing.Point(6, 21);
+            this.changeProductsCheckBox.Location = new System.Drawing.Point(4, 17);
+            this.changeProductsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.changeProductsCheckBox.Name = "changeProductsCheckBox";
-            this.changeProductsCheckBox.Size = new System.Drawing.Size(206, 33);
+            this.changeProductsCheckBox.Size = new System.Drawing.Size(167, 27);
             this.changeProductsCheckBox.TabIndex = 0;
             this.changeProductsCheckBox.Text = "Add/Remove Products";
             this.changeProductsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // createUserCheckBox
+            // manageMaintenanceCheckBox
             // 
-            this.createUserCheckBox.AutoSize = true;
-            this.createUserCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createUserCheckBox.Location = new System.Drawing.Point(6, 47);
-            this.createUserCheckBox.Name = "createUserCheckBox";
-            this.createUserCheckBox.Size = new System.Drawing.Size(130, 33);
-            this.createUserCheckBox.TabIndex = 1;
-            this.createUserCheckBox.Text = "Create Users";
-            this.createUserCheckBox.UseVisualStyleBackColor = true;
+            this.manageMaintenanceCheckBox.AutoSize = true;
+            this.manageMaintenanceCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageMaintenanceCheckBox.Location = new System.Drawing.Point(4, 38);
+            this.manageMaintenanceCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.manageMaintenanceCheckBox.Name = "manageMaintenanceCheckBox";
+            this.manageMaintenanceCheckBox.Size = new System.Drawing.Size(160, 27);
+            this.manageMaintenanceCheckBox.TabIndex = 1;
+            this.manageMaintenanceCheckBox.Text = "Manage Maintenance";
+            this.manageMaintenanceCheckBox.UseVisualStyleBackColor = true;
             // 
-            // employeeViewCheckBox
+            // viewEmployeesCheckBox
             // 
-            this.employeeViewCheckBox.AutoSize = true;
-            this.employeeViewCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeViewCheckBox.Location = new System.Drawing.Point(6, 125);
-            this.employeeViewCheckBox.Name = "employeeViewCheckBox";
-            this.employeeViewCheckBox.Size = new System.Drawing.Size(160, 33);
-            this.employeeViewCheckBox.TabIndex = 4;
-            this.employeeViewCheckBox.Text = "View Employees";
-            this.employeeViewCheckBox.UseVisualStyleBackColor = true;
+            this.viewEmployeesCheckBox.AutoSize = true;
+            this.viewEmployeesCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewEmployeesCheckBox.Location = new System.Drawing.Point(4, 102);
+            this.viewEmployeesCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.viewEmployeesCheckBox.Name = "viewEmployeesCheckBox";
+            this.viewEmployeesCheckBox.Size = new System.Drawing.Size(130, 27);
+            this.viewEmployeesCheckBox.TabIndex = 4;
+            this.viewEmployeesCheckBox.Text = "View Employees";
+            this.viewEmployeesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transactionCheckBox
+            // createUsersCheckBox
             // 
-            this.transactionCheckBox.AutoSize = true;
-            this.transactionCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionCheckBox.Location = new System.Drawing.Point(6, 73);
-            this.transactionCheckBox.Name = "transactionCheckBox";
-            this.transactionCheckBox.Size = new System.Drawing.Size(209, 33);
-            this.transactionCheckBox.TabIndex = 2;
-            this.transactionCheckBox.Text = "Complete Transactions";
-            this.transactionCheckBox.UseVisualStyleBackColor = true;
+            this.createUsersCheckBox.AutoSize = true;
+            this.createUsersCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createUsersCheckBox.Location = new System.Drawing.Point(4, 59);
+            this.createUsersCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.createUsersCheckBox.Name = "createUsersCheckBox";
+            this.createUsersCheckBox.Size = new System.Drawing.Size(109, 27);
+            this.createUsersCheckBox.TabIndex = 2;
+            this.createUsersCheckBox.Text = "Create Users";
+            this.createUsersCheckBox.UseVisualStyleBackColor = true;
             // 
-            // passwordCheckBox
+            // generatePasswordsCheckBox
             // 
-            this.passwordCheckBox.AutoSize = true;
-            this.passwordCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordCheckBox.Location = new System.Drawing.Point(6, 99);
-            this.passwordCheckBox.Name = "passwordCheckBox";
-            this.passwordCheckBox.Size = new System.Drawing.Size(188, 33);
-            this.passwordCheckBox.TabIndex = 3;
-            this.passwordCheckBox.Text = "Generate Passwords";
-            this.passwordCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // employeesDataSet
-            // 
-            this.employeesDataSet.DataSetName = "EmployeesDataSet";
-            this.employeesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this.employeesDataSet;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EmployeesTableAdapter = this.employeesTableAdapter;
-            this.tableAdapterManager.UpdateOrder = GSEP.EmployeesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // employeesDataGridView
-            // 
-            this.employeesDataGridView.AutoGenerateColumns = false;
-            this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.employeesDataGridView.DataSource = this.employeesBindingSource;
-            this.employeesDataGridView.Location = new System.Drawing.Point(718, 107);
-            this.employeesDataGridView.Name = "employeesDataGridView";
-            this.employeesDataGridView.ReadOnly = true;
-            this.employeesDataGridView.RowHeadersWidth = 51;
-            this.employeesDataGridView.RowTemplate.Height = 24;
-            this.employeesDataGridView.Size = new System.Drawing.Size(413, 321);
-            this.employeesDataGridView.TabIndex = 62;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Department";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Permissions";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Permissions";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
+            this.generatePasswordsCheckBox.AutoSize = true;
+            this.generatePasswordsCheckBox.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generatePasswordsCheckBox.Location = new System.Drawing.Point(4, 80);
+            this.generatePasswordsCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.generatePasswordsCheckBox.Name = "generatePasswordsCheckBox";
+            this.generatePasswordsCheckBox.Size = new System.Drawing.Size(155, 27);
+            this.generatePasswordsCheckBox.TabIndex = 3;
+            this.generatePasswordsCheckBox.Text = "Generate Passwords";
+            this.generatePasswordsCheckBox.UseVisualStyleBackColor = true;
             // 
             // ManageUsersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1151, 446);
-            this.Controls.Add(this.employeesDataGridView);
+            this.ClientSize = new System.Drawing.Size(863, 362);
             this.Controls.Add(this.permsGroupBox);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.depTextBox);
@@ -430,14 +356,12 @@
             this.Controls.Add(this.resetPassButton);
             this.Controls.Add(this.deleteUserButton);
             this.Controls.Add(this.titleLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageUsersForm";
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.ManageUsersForm_Load);
             this.permsGroupBox.ResumeLayout(false);
             this.permsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,21 +382,11 @@
         private System.Windows.Forms.TextBox depTextBox;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.GroupBox permsGroupBox;
-        private System.Windows.Forms.CheckBox transactionViewCheckBox;
+        private System.Windows.Forms.CheckBox changeSuppliesCheckBox;
         private System.Windows.Forms.CheckBox changeProductsCheckBox;
-        private System.Windows.Forms.CheckBox createUserCheckBox;
-        private System.Windows.Forms.CheckBox employeeViewCheckBox;
-        private System.Windows.Forms.CheckBox transactionCheckBox;
-        private System.Windows.Forms.CheckBox passwordCheckBox;
-        private EmployeesDataSet employeesDataSet;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private EmployeesDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
-        private EmployeesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView employeesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.CheckBox manageMaintenanceCheckBox;
+        private System.Windows.Forms.CheckBox viewEmployeesCheckBox;
+        private System.Windows.Forms.CheckBox createUsersCheckBox;
+        private System.Windows.Forms.CheckBox generatePasswordsCheckBox;
     }
 }

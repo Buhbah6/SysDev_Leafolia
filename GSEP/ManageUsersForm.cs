@@ -82,7 +82,6 @@ namespace GSEP
                 editName.Database.ExecuteSqlCommand(command);
                 MessageBox.Show("Name Changed Successfully.", "Successful Name Change", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }   
-            this.employeesTableAdapter.Fill(this.employeesDataSet.Employees);
         }
 
         private void changeDeptButton_Click(object sender, EventArgs e)
@@ -105,7 +104,6 @@ namespace GSEP
                 changeDept.Database.ExecuteSqlCommand(command);
                 MessageBox.Show("Department Changed Successfully.", "Successful Department Change", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            this.employeesTableAdapter.Fill(this.employeesDataSet.Employees);
         }
 
         private void changePermsButton_Click(object sender, EventArgs e)
@@ -124,7 +122,6 @@ namespace GSEP
                 changePerms.Database.ExecuteSqlCommand(command);
                 MessageBox.Show("Permissions Changed Successfully.", "Successful Permissions Change", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            this.employeesTableAdapter.Fill(this.employeesDataSet.Employees);
         }
 
         private void deleteUserButton_Click(object sender, EventArgs e)
@@ -150,14 +147,10 @@ namespace GSEP
                     MessageBox.Show("User Deletion Cancelled.", "User NOT Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            this.employeesTableAdapter.Fill(this.employeesDataSet.Employees);
         }
 
         private void ManageUsersForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'employeesDataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this.employeesDataSet.Employees);
-
             var permEntities = new ProjectDBEntities();
             List<Employee> employeeList = permEntities.Employees.ToList();
             String perms = "";
@@ -214,11 +207,11 @@ namespace GSEP
         {
             String str = "";
             str += checkBoxVal(changeProductsCheckBox);
-            str += checkBoxVal(createUserCheckBox);
-            str += checkBoxVal(transactionCheckBox);
-            str += checkBoxVal(passwordCheckBox);
-            str += checkBoxVal(employeeViewCheckBox);
-            str += checkBoxVal(transactionViewCheckBox);
+            str += checkBoxVal(manageMaintenanceCheckBox);
+            str += checkBoxVal(createUsersCheckBox);
+            str += checkBoxVal(generatePasswordsCheckBox);
+            str += checkBoxVal(viewEmployeesCheckBox);
+            str += checkBoxVal(changeSuppliesCheckBox);
             return str;
         }
 
@@ -240,14 +233,6 @@ namespace GSEP
                     validID = true;
             }
             return validID;
-        }
-
-        private void employeesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.employeesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.employeesDataSet);
-
         }
     }
 }

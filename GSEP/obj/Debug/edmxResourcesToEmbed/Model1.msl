@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ProjectDBModelStoreContainer" CdmEntityContainer="ProjectDBEntities1">
+  <EntityContainerMapping StorageEntityContainer="ProjectDBModelStoreContainer" CdmEntityContainer="ProjectDBEntities">
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="ProjectDBModel.Employee">
         <MappingFragment StoreEntitySet="Employees">
@@ -21,6 +21,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Maintenances">
+      <EntityTypeMapping TypeName="ProjectDBModel.Maintenance">
+        <MappingFragment StoreEntitySet="Maintenance">
+          <ScalarProperty Name="MaintenanceID" ColumnName="MaintenanceID" />
+          <ScalarProperty Name="ProductSKU" ColumnName="ProductSKU" />
+          <ScalarProperty Name="Strategy" ColumnName="Strategy" />
+          <ScalarProperty Name="InitialDate" ColumnName="InitialDate" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="ProjectDBModel.Product">
         <MappingFragment StoreEntitySet="Products">
@@ -28,16 +39,7 @@
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Transactions">
-      <EntityTypeMapping TypeName="ProjectDBModel.Transaction">
-        <MappingFragment StoreEntitySet="Transactions">
-          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
-          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

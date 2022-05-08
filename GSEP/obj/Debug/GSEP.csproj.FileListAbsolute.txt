@@ -73,3 +73,41 @@ C:\Users\Anthony\Desktop\Assignments\AppDev\GSEP\GSEP\GSEP\obj\Debug\GSEP.csproj
 C:\Users\Anthony\Desktop\Assignments\AppDev\GSEP\GSEP\GSEP\obj\Debug\GSEP.csproj.CopyComplete
 C:\Users\Anthony\Desktop\Assignments\AppDev\GSEP\GSEP\GSEP\obj\Debug\GSEP.exe
 C:\Users\Anthony\Desktop\Assignments\AppDev\GSEP\GSEP\GSEP\obj\Debug\GSEP.pdb
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.csproj.AssemblyReference.cache
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.ViewMaintenance.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.ManageUsersForm.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.MainMenuForm.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.CreateUserForm.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.LoginForm.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.Properties.Resources.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.csproj.GenerateResource.cache
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.csproj.CoreCompileInputs.cache
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.exe
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.pdb
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\GSEP.exe.config
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\GSEP.exe
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\GSEP.pdb
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\EntityFramework.dll
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\EntityFramework.xml
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.csproj.CopyComplete
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.ViewProducts.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\obj\Debug\GSEP.ChangePasswordForm.resources
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDB.mdf
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDB_log.ldf
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.Context.tt
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.tt
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\Employee.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\Login.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\Maintenance.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\Product.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.Context.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.Designer.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectModel.edmx.diagram
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDBDataSet.Designer.cs
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDBDataSet.xsc
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDBDataSet.xsd
+C:\Users\Anthony Nadeau\OneDrive\Documents\GitHub\SysDev_Leafolia\GSEP\bin\Debug\ProjectDBDataSet.xss

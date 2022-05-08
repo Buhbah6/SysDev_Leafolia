@@ -12,13 +12,13 @@ namespace GSEP
     using System;
     using System.Collections.Generic;
     
-    public partial class Transaction
+    public partial class Employee
     {
-        public string TransactionID { get; set; }
-        public System.DateTime TransactionDate { get; set; }
-        public decimal Total { get; set; }
         public string EmployeeID { get; set; }
-    
-        public virtual Employee Employee { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Department { get; set; }
+        public string Permissions { get; set; }
     }
 }

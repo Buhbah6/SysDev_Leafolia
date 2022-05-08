@@ -52,7 +52,7 @@ namespace GSEP
             }
             else
                 errorLabel.Text = "Old Password is incorrect. Access Denied. Please Try Again.";
-            
+
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)

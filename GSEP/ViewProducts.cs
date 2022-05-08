@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSEP
 {
-    public partial class ViewProductsForm : Form
+    public partial class ViewProducts : Form
     {
-        public ViewProductsForm()
+        public ViewProducts()
         {
             InitializeComponent();
         }
@@ -20,7 +20,6 @@ namespace GSEP
         private void ViewProducts_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'productsDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.productsDataSet.Products);
         }
 
         private void searchSkuButton_Click(object sender, EventArgs e)
@@ -73,7 +72,6 @@ namespace GSEP
                 string command = "UPDATE Products SET Quantity = " + qtyNumericUpDown.Value + " WHERE ProductSku = '" +
                     skuTextBox.Text + "';";
                 dbProducts.Database.ExecuteSqlCommand(command);
-                this.productsTableAdapter.Fill(this.productsDataSet.Products);
             }
         }
 
@@ -111,7 +109,6 @@ namespace GSEP
                 string command = "UPDATE Products SET Price = '" + priceTextBox.Text + "'WHERE ProductSku = '" +
                     skuTextBox.Text + "';";
                 dbProducts.Database.ExecuteSqlCommand(command);
-                this.productsTableAdapter.Fill(this.productsDataSet.Products);
             }
         }
 
@@ -154,14 +151,6 @@ namespace GSEP
             this.Hide();
             mmf.ShowDialog();
             this.Close();
-        }
-
-        private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.productsDataSet);
-
         }
     }
 }

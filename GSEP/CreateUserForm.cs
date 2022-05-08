@@ -25,8 +25,8 @@ namespace GSEP
             {
                 returnButton.Enabled = false;
                 newAdmin = true;
-                changeProductsCheckBox.Checked = createUserCheckBox.Checked = transactionCheckBox.Checked =
-                passwordCheckBox.Checked = employeeViewCheckBox.Checked = transactionViewCheckBox.Checked = true;
+                changeProductsCheckBox.Checked = manageMaintenanceCheckBox.Checked = createUsersCheckBox.Checked =
+                passwordCheckBox.Checked = employeeViewCheckBox.Checked = manageSuppliesCheckBox.Checked = true;
                 permsGroupBox.Enabled = false;
                 depTextBox.Text = "Owner";
                 depTextBox.Enabled = false;
@@ -96,8 +96,8 @@ namespace GSEP
             MessageBox.Show(String.Format("Here is your new login info. Please retain it as it cannot be changed prior to login\nEmployee ID: {0}\nPassword: {1}", "00001", password), 
                 "Admin Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            changeProductsCheckBox.Checked = createUserCheckBox.Checked = transactionCheckBox.Checked =
-            passwordCheckBox.Checked = employeeViewCheckBox.Checked = transactionViewCheckBox.Checked = false;
+            changeProductsCheckBox.Checked = manageMaintenanceCheckBox.Checked = createUsersCheckBox.Checked =
+            passwordCheckBox.Checked = employeeViewCheckBox.Checked = manageSuppliesCheckBox.Checked = false;
             permsGroupBox.Enabled = true;
             depTextBox.Enabled = true;
 
@@ -109,11 +109,11 @@ namespace GSEP
         {
             String str = "";
             str += checkBoxVal(changeProductsCheckBox);
-            str += checkBoxVal(createUserCheckBox);
-            str += checkBoxVal(transactionCheckBox);
+            str += checkBoxVal(manageMaintenanceCheckBox);
+            str += checkBoxVal(createUsersCheckBox);
             str += checkBoxVal(passwordCheckBox);
             str += checkBoxVal(employeeViewCheckBox);
-            str += checkBoxVal(transactionViewCheckBox);
+            str += checkBoxVal(manageSuppliesCheckBox);
             return str;
         }
 
