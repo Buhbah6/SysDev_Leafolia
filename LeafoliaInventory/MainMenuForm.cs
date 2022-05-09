@@ -22,6 +22,7 @@ namespace LeafoliaInventory
             createUsersButton.Enabled = true;
             manageUsersButton.Enabled = true;
             manageMaintenanceButton.Enabled = true;
+            dbButton.Enabled = true;
 
             var permEntities = new ProjectDBEntities();
             List<Employee> employeeList = permEntities.Employees.ToList();
@@ -32,6 +33,8 @@ namespace LeafoliaInventory
                     perms = emp.Permissions;
             }
 
+            if (perms.Contains('0'))
+                dbButton.Enabled = false;
             if (perms.ElementAt(1) == '0')
                 manageMaintenanceButton.Enabled = false;
             if (perms.ElementAt(2) == '0')
@@ -85,6 +88,14 @@ namespace LeafoliaInventory
             ChangePasswordForm cf = new ChangePasswordForm();
             this.Hide();
             cf.ShowDialog();
+            this.Close();
+        }
+
+        private void dbButton_Click(object sender, EventArgs e)
+        {
+            DatabaseForm dbf = new DatabaseForm();
+            this.Hide();
+            dbf.ShowDialog();
             this.Close();
         }
     }

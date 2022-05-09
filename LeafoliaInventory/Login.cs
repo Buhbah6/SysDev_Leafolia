@@ -16,5 +16,12 @@ namespace LeafoliaInventory
     {
         public string EmployeeID { get; set; }
         public int FailedLogins { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("{0} : {1}", EmployeeID, FailedLogins);
+        }
     }
+
+    
 }

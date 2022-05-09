@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSEP", "GSEP.csproj", "{581F3A12-0B4A-4A0C-B63D-A1D5ECEEF4AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeafoliaInventory", "LeafoliaInventory.csproj", "{581F3A12-0B4A-4A0C-B63D-A1D5ECEEF4AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BFE25058-449F-42B4-9024-B3AF338425FD}
+		SolutionGuid = {CDCF2BC8-B5AC-4290-9546-6595AAB6FC04}
 	EndGlobalSection
 EndGlobal

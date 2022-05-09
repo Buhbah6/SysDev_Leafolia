@@ -18,5 +18,10 @@ namespace LeafoliaInventory
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("{0} : {1}\n${2} - {3} in stock", ProductSKU, ProductName, Price, Quantity);
+        }
     }
 }

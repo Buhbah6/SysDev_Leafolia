@@ -34,7 +34,7 @@
             this.manageMaintenanceButton = new System.Windows.Forms.Button();
             this.manageUsersButton = new System.Windows.Forms.Button();
             this.manageProductsButton = new System.Windows.Forms.Button();
-            this.manageSuppliesButton = new System.Windows.Forms.Button();
+            this.dbButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.calendarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -127,20 +127,20 @@
             this.manageProductsButton.UseVisualStyleBackColor = false;
             this.manageProductsButton.Click += new System.EventHandler(this.manageProductsButton_Click);
             // 
-            // manageSuppliesButton
+            // dbButton
             // 
-            this.manageSuppliesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
-            this.manageSuppliesButton.Enabled = false;
-            this.manageSuppliesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.manageSuppliesButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageSuppliesButton.ForeColor = System.Drawing.Color.Black;
-            this.manageSuppliesButton.Location = new System.Drawing.Point(322, 391);
-            this.manageSuppliesButton.Margin = new System.Windows.Forms.Padding(2);
-            this.manageSuppliesButton.Name = "manageSuppliesButton";
-            this.manageSuppliesButton.Size = new System.Drawing.Size(215, 93);
-            this.manageSuppliesButton.TabIndex = 7;
-            this.manageSuppliesButton.Text = "View/Manage Supplies";
-            this.manageSuppliesButton.UseVisualStyleBackColor = false;
+            this.dbButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
+            this.dbButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dbButton.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dbButton.ForeColor = System.Drawing.Color.Black;
+            this.dbButton.Location = new System.Drawing.Point(322, 391);
+            this.dbButton.Margin = new System.Windows.Forms.Padding(2);
+            this.dbButton.Name = "dbButton";
+            this.dbButton.Size = new System.Drawing.Size(215, 93);
+            this.dbButton.TabIndex = 7;
+            this.dbButton.Text = "View All Database Data";
+            this.dbButton.UseVisualStyleBackColor = false;
+            this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
             // 
             // logoutButton
             // 
@@ -180,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(584, 645);
             this.Controls.Add(this.calendarButton);
             this.Controls.Add(this.logoutButton);
-            this.Controls.Add(this.manageSuppliesButton);
+            this.Controls.Add(this.dbButton);
             this.Controls.Add(this.manageProductsButton);
             this.Controls.Add(this.manageUsersButton);
             this.Controls.Add(this.manageMaintenanceButton);
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Button manageMaintenanceButton;
         private System.Windows.Forms.Button manageUsersButton;
         private System.Windows.Forms.Button manageProductsButton;
-        private System.Windows.Forms.Button manageSuppliesButton;
+        private System.Windows.Forms.Button dbButton;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button calendarButton;
     }

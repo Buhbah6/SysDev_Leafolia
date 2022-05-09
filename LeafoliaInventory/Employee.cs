@@ -20,5 +20,11 @@ namespace LeafoliaInventory
         public string LastName { get; set; }
         public string Department { get; set; }
         public string Permissions { get; set; }
+
+
+        public override string ToString()
+        {
+            return String.Format("{0} : {1} {2} -- {3}", EmployeeID, FirstName, LastName, Department);
+        }
     }
 }
