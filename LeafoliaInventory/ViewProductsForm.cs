@@ -21,6 +21,20 @@ namespace LeafoliaInventory
         {
             // TODO: This line of code loads data into the 'productsDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.productsDataSet.Products);
+            var db = new ProjectDBEntities();
+            List<Employee> emps = db.Employees.ToList();
+            Employee currentEmp = null;
+            foreach (Employee emp in emps)
+            {
+                if (emp.EmployeeID.Equals(LoginForm.currentEmployeeId))
+                    currentEmp = emp;
+            }
+            if (currentEmp.Permissions.ElementAt(0) == '0')
+            {
+                editQtyButton.Enabled = false;
+                editPriceButton.Enabled = false;
+                addProductButton.Enabled = false;
+            }
         }
 
         private void searchSkuButton_Click(object sender, EventArgs e)

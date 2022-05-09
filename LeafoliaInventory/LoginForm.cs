@@ -61,10 +61,16 @@ namespace LeafoliaInventory
                         canLogin = true;
                     }
 
-                    //if (Employee.unHashPassword(employeeList[i].Password, passwordTextBox.Text) && canLogin)
-                    if (employeeList[i].Password.Equals(passwordTextBox.Text) && canLogin)
+                    if (Employee.unHashPassword(employeeList[i].Password, passwordTextBox.Text) && canLogin)
                     {
                         currentEmployeeId = employeeList[i].EmployeeID;
+
+                        foreach (Login login in loginList)
+                        {
+                            if (login.EmployeeID.Equals(usernameTextBox.Text))
+                                loginReqs.Database.ExecuteSqlCommand("DELETE FROM Logins WHERE EmployeeID = '" + usernameTextBox.Text + "';");
+                        }
+
                         if (usernameTextBox.Text.Equals("10101") && passwordTextBox.Text.Equals("ownerPass"))
                         {
                             CreateUserForm cuf = new CreateUserForm();

@@ -27,9 +27,11 @@ namespace LeafoliaInventory
             Random rnd = new Random();
 
             String password = "defaultPass" + 01 + rnd.Next(1, 999);
+            String passwordHash = Employee.hashPassword(password);
+            
             if (!String.IsNullOrEmpty(empIDTextBox.Text) || verifyID(resetPass) == false)
             {
-                String command = "UPDATE Employees SET password = '" + password + "'WHERE EmployeeID = '" + empIDTextBox.Text + "';";
+                String command = "UPDATE Employees SET password = '" + passwordHash + "'WHERE EmployeeID = '" + empIDTextBox.Text + "';";
                 resetPass.Database.ExecuteSqlCommand(command);
                 MessageBox.Show(String.Format("Password reset successfully.\nPlease provide this information to the user: " +
                    "\nPassword: {0}", password), "Employee Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

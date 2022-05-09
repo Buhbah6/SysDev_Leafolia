@@ -35,22 +35,11 @@
             this.employeesTableAdapter = new LeafoliaInventory.EmployeesDataSetTableAdapters.EmployeesTableAdapter();
             this.tableAdapterManager = new LeafoliaInventory.EmployeesDataSetTableAdapters.TableAdapterManager();
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintenanceDataSet = new LeafoliaInventory.MaintenanceDataSet();
             this.maintenanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maintenanceTableAdapter = new LeafoliaInventory.MaintenanceDataSetTableAdapters.MaintenanceTableAdapter();
             this.tableAdapterManager1 = new LeafoliaInventory.MaintenanceDataSetTableAdapters.TableAdapterManager();
             this.maintenanceDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsDataSet = new LeafoliaInventory.ProductsDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new LeafoliaInventory.ProductsDataSetTableAdapters.ProductsTableAdapter();
@@ -65,6 +54,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
@@ -109,46 +112,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.employeesDataGridView.DataSource = this.employeesBindingSource;
-            this.employeesDataGridView.Location = new System.Drawing.Point(12, 146);
+            this.employeesDataGridView.Location = new System.Drawing.Point(12, 156);
             this.employeesDataGridView.Name = "employeesDataGridView";
             this.employeesDataGridView.Size = new System.Drawing.Size(776, 220);
             this.employeesDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Department";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Permissions";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Permissions";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // maintenanceDataSet
             // 
@@ -182,40 +149,10 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.maintenanceDataGridView.DataSource = this.maintenanceBindingSource;
-            this.maintenanceDataGridView.Location = new System.Drawing.Point(12, 411);
+            this.maintenanceDataGridView.Location = new System.Drawing.Point(408, 414);
             this.maintenanceDataGridView.Name = "maintenanceDataGridView";
-            this.maintenanceDataGridView.Size = new System.Drawing.Size(776, 220);
+            this.maintenanceDataGridView.Size = new System.Drawing.Size(380, 220);
             this.maintenanceDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MaintenanceID";
-            this.dataGridViewTextBoxColumn7.HeaderText = "MaintenanceID";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ProductSKU";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ProductSKU";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Strategy";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Strategy";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "InitialDate";
-            this.dataGridViewTextBoxColumn10.HeaderText = "InitialDate";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Interval";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Interval";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // productsDataSet
             // 
@@ -248,9 +185,9 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15});
             this.productsDataGridView.DataSource = this.productsBindingSource;
-            this.productsDataGridView.Location = new System.Drawing.Point(12, 676);
+            this.productsDataGridView.Location = new System.Drawing.Point(12, 414);
             this.productsDataGridView.Name = "productsDataGridView";
-            this.productsDataGridView.Size = new System.Drawing.Size(776, 220);
+            this.productsDataGridView.Size = new System.Drawing.Size(380, 220);
             this.productsDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn12
@@ -295,7 +232,7 @@
             // 
             this.printButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(112)))), ((int)(((byte)(29)))));
             this.printButton.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printButton.Location = new System.Drawing.Point(12, 911);
+            this.printButton.Location = new System.Drawing.Point(12, 648);
             this.printButton.Margin = new System.Windows.Forms.Padding(2);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(776, 71);
@@ -331,12 +268,116 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 35);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Employees:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 379);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 35);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Products:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(402, 379);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 35);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Maintenance:";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Department";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Permissions";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Permissions";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "MaintenanceID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "MaintenanceID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ProductSKU";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ProductSKU";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Strategy";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Strategy";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "InitialDate";
+            this.dataGridViewTextBoxColumn10.HeaderText = "InitialDate";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Interval";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Interval";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
             // DatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(240)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(800, 992);
+            this.ClientSize = new System.Drawing.Size(800, 730);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.menuButton);
@@ -356,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -366,22 +408,11 @@
         private LeafoliaInventory.EmployeesDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
         private LeafoliaInventory.EmployeesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView employeesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private LeafoliaInventory.MaintenanceDataSet maintenanceDataSet;
         private System.Windows.Forms.BindingSource maintenanceBindingSource;
         private LeafoliaInventory.MaintenanceDataSetTableAdapters.MaintenanceTableAdapter maintenanceTableAdapter;
         private LeafoliaInventory.MaintenanceDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridView maintenanceDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private LeafoliaInventory.ProductsDataSet productsDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private LeafoliaInventory.ProductsDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
@@ -396,5 +427,19 @@
         private System.Windows.Forms.Label label1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -72,11 +72,11 @@ namespace LeafoliaInventory
                     tempID = "0" + tempID;
             }
 
-            //String password = Employee.hashPassword("defaultPass" + userNum + rnd.Next(1, 999));
             String password = "defaultPass" + userNum + rnd.Next(1, 999);
+            String passwordHash = Employee.hashPassword(password);
 
             String command = "INSERT INTO Employees(EmployeeID, Password, FirstName, LastName, Department, Permissions) " +
-                "VALUES ('" + tempID + "', '" + password + "', '" + fNameTextBox.Text + "', '" + lNameTextBox.Text +
+                "VALUES ('" + tempID + "', '" + passwordHash + "', '" + fNameTextBox.Text + "', '" + lNameTextBox.Text +
                 "', '" + depTextBox.Text + "', '" + getPermissions() + "');";
 
             if (admin)

@@ -27,7 +27,7 @@ namespace LeafoliaInventory
             {
                 if (emp.EmployeeID.Equals(LoginForm.currentEmployeeId))
                 {
-                    validInfo = emp.Password == oldPassTextBox.Text;
+                    validInfo = Employee.unHashPassword(emp.Password, oldPassTextBox.Text);
                     passwordHash = emp.Password;
                 }
             }
@@ -39,7 +39,7 @@ namespace LeafoliaInventory
                     if (meetsRequirements(newPassTextBox.Text))
                     {
                         String command = "UPDATE Employees SET Password = REPLACE('" + passwordHash + "', '" +
-                            passwordHash + "', '" + newPassTextBox.Text + "') WHERE EmployeeID = '" +
+                            passwordHash + "', '" + Employee.hashPassword(newPassTextBox.Text) + "') WHERE EmployeeID = '" +
                             LoginForm.currentEmployeeId + "';";
                         passReqs.Database.ExecuteSqlCommand(command);
                         MessageBox.Show("Password Changed Successfully. Returning to Main Menu.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
