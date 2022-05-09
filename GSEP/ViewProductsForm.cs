@@ -137,7 +137,7 @@ namespace GSEP
 
             if (validProduct)
             {
-                String command = "INSERT INTO Products VALUES ('" + skuTextBox.Text +
+                String command = "INSERT INTO Products(ProductSku, ProductName, Price, Quantity) VALUES ('" + skuTextBox.Text +
                     "','" + descTextBox.Text + "','" + priceTextBox.Text + "','" + qtyNumericUpDown.Value + "');";
                 productManagement.Database.ExecuteSqlCommand(command);
             }

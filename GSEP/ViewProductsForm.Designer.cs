@@ -52,7 +52,6 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             employeeIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
@@ -62,6 +61,50 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // employeeIDLabel
+            // 
+            employeeIDLabel.AutoSize = true;
+            employeeIDLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            employeeIDLabel.Location = new System.Drawing.Point(14, 102);
+            employeeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            employeeIDLabel.Name = "employeeIDLabel";
+            employeeIDLabel.Size = new System.Drawing.Size(122, 32);
+            employeeIDLabel.TabIndex = 77;
+            employeeIDLabel.Text = "Product Sku:";
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            firstNameLabel.Location = new System.Drawing.Point(20, 132);
+            firstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(114, 32);
+            firstNameLabel.TabIndex = 78;
+            firstNameLabel.Text = "Description:";
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lastNameLabel.Location = new System.Drawing.Point(70, 163);
+            lastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(61, 32);
+            lastNameLabel.TabIndex = 79;
+            lastNameLabel.Text = "Price:";
+            // 
+            // departmentLabel
+            // 
+            departmentLabel.AutoSize = true;
+            departmentLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            departmentLabel.Location = new System.Drawing.Point(40, 191);
+            departmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            departmentLabel.Name = "departmentLabel";
+            departmentLabel.Size = new System.Drawing.Size(91, 32);
+            departmentLabel.TabIndex = 80;
+            departmentLabel.Text = "Quantity:";
             // 
             // menuButton
             // 
@@ -113,50 +156,6 @@
             this.skuTextBox.Name = "skuTextBox";
             this.skuTextBox.Size = new System.Drawing.Size(180, 20);
             this.skuTextBox.TabIndex = 81;
-            // 
-            // employeeIDLabel
-            // 
-            employeeIDLabel.AutoSize = true;
-            employeeIDLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            employeeIDLabel.Location = new System.Drawing.Point(14, 102);
-            employeeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            employeeIDLabel.Name = "employeeIDLabel";
-            employeeIDLabel.Size = new System.Drawing.Size(122, 32);
-            employeeIDLabel.TabIndex = 77;
-            employeeIDLabel.Text = "Product Sku:";
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            firstNameLabel.Location = new System.Drawing.Point(20, 132);
-            firstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(114, 32);
-            firstNameLabel.TabIndex = 78;
-            firstNameLabel.Text = "Description:";
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lastNameLabel.Location = new System.Drawing.Point(70, 163);
-            lastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 32);
-            lastNameLabel.TabIndex = 79;
-            lastNameLabel.Text = "Price:";
-            // 
-            // departmentLabel
-            // 
-            departmentLabel.AutoSize = true;
-            departmentLabel.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            departmentLabel.Location = new System.Drawing.Point(40, 191);
-            departmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            departmentLabel.Name = "departmentLabel";
-            departmentLabel.Size = new System.Drawing.Size(91, 32);
-            departmentLabel.TabIndex = 80;
-            departmentLabel.Text = "Quantity:";
             // 
             // editQtyButton
             // 
@@ -253,13 +252,12 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.DataGridViewTextBoxColumn9});
+            this.dataGridViewTextBoxColumn4});
             this.productsDataGridView.DataSource = this.productsBindingSource;
-            this.productsDataGridView.Location = new System.Drawing.Point(326, 112);
+            this.productsDataGridView.Location = new System.Drawing.Point(326, 113);
             this.productsDataGridView.Name = "productsDataGridView";
-            this.productsDataGridView.Size = new System.Drawing.Size(361, 220);
-            this.productsDataGridView.TabIndex = 85;
+            this.productsDataGridView.Size = new System.Drawing.Size(363, 220);
+            this.productsDataGridView.TabIndex = 86;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -285,21 +283,12 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // DataGridViewTextBoxColumn9
-            // 
-            this.DataGridViewTextBoxColumn9.DataPropertyName = "DateAdded";
-            this.DataGridViewTextBoxColumn9.HeaderText = "DateAdded";
-            this.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9";
-            this.DataGridViewTextBoxColumn9.ReadOnly = true;
-            this.DataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // ViewProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
-            this.ClientSize = new System.Drawing.Size(712, 353);
+            this.ClientSize = new System.Drawing.Size(710, 353);
             this.Controls.Add(this.productsDataGridView);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.qtyNumericUpDown);
@@ -347,6 +336,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn9;
     }
 }

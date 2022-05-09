@@ -287,8 +287,6 @@ namespace GSEP {
             
             private global::System.Data.DataColumn columnQuantity;
             
-            private global::System.Data.DataColumn columnDateAdded;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ProductsDataTable() {
@@ -356,14 +354,6 @@ namespace GSEP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DateAddedColumn {
-                get {
-                    return this.columnDateAdded;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +389,13 @@ namespace GSEP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProductsRow AddProductsRow(string ProductSKU, string ProductName, decimal Price, int Quantity, System.DateTime DateAdded) {
+            public ProductsRow AddProductsRow(string ProductSKU, string ProductName, decimal Price, int Quantity) {
                 ProductsRow rowProductsRow = ((ProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProductSKU,
                         ProductName,
                         Price,
-                        Quantity,
-                        DateAdded};
+                        Quantity};
                 rowProductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProductsRow);
                 return rowProductsRow;
@@ -440,7 +429,6 @@ namespace GSEP {
                 this.columnProductName = base.Columns["ProductName"];
                 this.columnPrice = base.Columns["Price"];
                 this.columnQuantity = base.Columns["Quantity"];
-                this.columnDateAdded = base.Columns["DateAdded"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -454,8 +442,6 @@ namespace GSEP {
                 base.Columns.Add(this.columnPrice);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
-                this.columnDateAdded = new global::System.Data.DataColumn("DateAdded", typeof(System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateAdded);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProductSKU}, true));
                 this.columnProductSKU.AllowDBNull = false;
@@ -465,7 +451,6 @@ namespace GSEP {
                 this.columnProductName.MaxLength = 50;
                 this.columnPrice.AllowDBNull = false;
                 this.columnQuantity.AllowDBNull = false;
-                this.columnDateAdded.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,34 +634,6 @@ namespace GSEP {
                     this[this.tableProducts.QuantityColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DateAdded {
-                get {
-                    try {
-                        return (System.DateTime)(this[this.tableProducts.DateAddedColumn]);
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateAdded\' in table \'Products\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProducts.DateAddedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDateAddedNull() {
-                return this.IsNull(this.tableProducts.DateAddedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDateAddedNull() {
-                this[this.tableProducts.DateAddedColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -842,21 +799,22 @@ namespace GSEP.ProductsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ProductName", "ProductName");
             tableMapping.ColumnMappings.Add("Price", "Price");
             tableMapping.ColumnMappings.Add("Quantity", "Quantity");
-            tableMapping.ColumnMappings.Add("DateAdded", "DateAdded");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Products] WHERE (([ProductSKU] = @Original_ProductSKU) AND ([D" +
-                "ateAdded] = @Original_DateAdded))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Products] WHERE (([ProductSKU] = @Original_ProductSKU) AND ([P" +
+                "roductName] = @Original_ProductName) AND ([Price] = @Original_Price) AND ([Quant" +
+                "ity] = @Original_Quantity))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductSKU", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductSKU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateAdded", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateAdded", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Products] ([ProductSKU], [ProductName], [Price], [Quantity]) V" +
                 "ALUES (@ProductSKU, @ProductName, @Price, @Quantity);\r\nSELECT ProductSKU, Produc" +
-                "tName, Price, Quantity, DateAdded FROM Products WHERE (ProductSKU = @ProductSKU)" +
-                "";
+                "tName, Price, Quantity FROM Products WHERE (ProductSKU = @ProductSKU)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductSKU", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductSKU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -864,15 +822,17 @@ namespace GSEP.ProductsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Products] SET [ProductSKU] = @ProductSKU, [ProductName] = @ProductName, [Price] = @Price, [Quantity] = @Quantity WHERE (([ProductSKU] = @Original_ProductSKU) AND ([DateAdded] = @Original_DateAdded));
-SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (ProductSKU = @ProductSKU)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Products] SET [ProductSKU] = @ProductSKU, [ProductName] = @ProductName, [Price] = @Price, [Quantity] = @Quantity WHERE (([ProductSKU] = @Original_ProductSKU) AND ([ProductName] = @Original_ProductName) AND ([Price] = @Original_Price) AND ([Quantity] = @Original_Quantity));
+SELECT ProductSKU, ProductName, Price, Quantity FROM Products WHERE (ProductSKU = @ProductSKU)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductSKU", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductSKU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductSKU", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductSKU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateAdded", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateAdded", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -888,7 +848,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM dbo.Products";
+            this._commandCollection[0].CommandText = "SELECT ProductSKU, ProductName, Price, Quantity FROM dbo.Products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -949,19 +909,21 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ProductSKU, System.DateTime Original_DateAdded) {
+        public virtual int Delete(string Original_ProductSKU, string Original_ProductName, decimal Original_Price, int Original_Quantity) {
             if ((Original_ProductSKU == null)) {
                 throw new global::System.ArgumentNullException("Original_ProductSKU");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ProductSKU));
             }
-            if ((Original_DateAdded == null)) {
-                throw new global::System.ArgumentNullException("Original_DateAdded");
+            if ((Original_ProductName == null)) {
+                throw new global::System.ArgumentNullException("Original_ProductName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DateAdded));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ProductName));
             }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_Price));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Quantity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1017,7 +979,7 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProductSKU, string ProductName, decimal Price, int Quantity, string Original_ProductSKU, System.DateTime Original_DateAdded) {
+        public virtual int Update(string ProductSKU, string ProductName, decimal Price, int Quantity, string Original_ProductSKU, string Original_ProductName, decimal Original_Price, int Original_Quantity) {
             if ((ProductSKU == null)) {
                 throw new global::System.ArgumentNullException("ProductSKU");
             }
@@ -1038,12 +1000,14 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ProductSKU));
             }
-            if ((Original_DateAdded == null)) {
-                throw new global::System.ArgumentNullException("Original_DateAdded");
+            if ((Original_ProductName == null)) {
+                throw new global::System.ArgumentNullException("Original_ProductName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = (System.DateTime)(Original_DateAdded);
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ProductName));
             }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_Price));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Quantity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1064,8 +1028,8 @@ SELECT ProductSKU, ProductName, Price, Quantity, DateAdded FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProductName, decimal Price, int Quantity, string Original_ProductSKU, System.DateTime Original_DateAdded) {
-            return this.Update(Original_ProductSKU, ProductName, Price, Quantity, Original_ProductSKU, Original_DateAdded);
+        public virtual int Update(string ProductName, decimal Price, int Quantity, string Original_ProductSKU, string Original_ProductName, decimal Original_Price, int Original_Quantity) {
+            return this.Update(Original_ProductSKU, ProductName, Price, Quantity, Original_ProductSKU, Original_ProductName, Original_Price, Original_Quantity);
         }
     }
     

@@ -245,7 +245,7 @@
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(112)))), ((int)(((byte)(86)))));
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Sitka Banner", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.Location = new System.Drawing.Point(767, 0);
+            this.menuButton.Location = new System.Drawing.Point(753, 7);
             this.menuButton.Margin = new System.Windows.Forms.Padding(2);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(95, 31);
@@ -378,11 +378,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.employeesDataGridView.DataSource = this.employeesBindingSource;
-            this.employeesDataGridView.Location = new System.Drawing.Point(537, 87);
+            this.employeesDataGridView.Location = new System.Drawing.Point(539, 87);
             this.employeesDataGridView.Name = "employeesDataGridView";
-            this.employeesDataGridView.Size = new System.Drawing.Size(302, 261);
+            this.employeesDataGridView.Size = new System.Drawing.Size(289, 262);
             this.employeesDataGridView.TabIndex = 62;
-            this.employeesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -419,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(187)))), ((int)(((byte)(143)))));
-            this.ClientSize = new System.Drawing.Size(863, 362);
+            this.ClientSize = new System.Drawing.Size(853, 364);
             this.Controls.Add(this.employeesDataGridView);
             this.Controls.Add(this.permsGroupBox);
             this.Controls.Add(this.menuButton);

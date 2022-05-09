@@ -14,12 +14,10 @@ namespace GSEP
     
     public partial class Maintenance
     {
-        public int MaintenanceID { get; set; }
+        public string MaintenanceID { get; set; }
         public string ProductSKU { get; set; }
         public string Strategy { get; set; }
         public System.DateTime InitialDate { get; set; }
         public int Interval { get; set; }
-    
-        public virtual Product Product { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace GSEP
             {
                 if (emp.EmployeeID.Equals(LoginForm.currentEmployeeId))
                 {
-                    validInfo = Employee.unHashPassword(emp.Password, oldPassTextBox.Text);
+                    validInfo = emp.Password == oldPassTextBox.Text;
                     passwordHash = emp.Password;
                 }
             }
@@ -39,7 +39,7 @@ namespace GSEP
                     if (meetsRequirements(newPassTextBox.Text))
                     {
                         String command = "UPDATE Employees SET Password = REPLACE('" + passwordHash + "', '" +
-                            passwordHash + "', '" + Employee.hashPassword(newPassTextBox.Text) + "') WHERE EmployeeID = '" +
+                            passwordHash + "', '" + newPassTextBox.Text + "') WHERE EmployeeID = '" +
                             LoginForm.currentEmployeeId + "';";
                         passReqs.Database.ExecuteSqlCommand(command);
                         MessageBox.Show("Password Changed Successfully. Returning to Main Menu.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);

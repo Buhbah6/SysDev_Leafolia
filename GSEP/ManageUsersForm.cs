@@ -241,8 +241,16 @@ namespace GSEP
             return validID;
         }
 
-        private void employeesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void employeesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void employeesBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.employeesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.employeesDataSet);
 
         }
     }

@@ -476,7 +476,7 @@ namespace GSEP {
                 this.columnEmployeeID.Unique = true;
                 this.columnEmployeeID.MaxLength = 5;
                 this.columnPassword.AllowDBNull = false;
-                this.columnPassword.MaxLength = 50;
+                this.columnPassword.MaxLength = 100;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 50;
                 this.columnLastName.AllowDBNull = false;
