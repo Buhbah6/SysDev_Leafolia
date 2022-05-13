@@ -35,6 +35,7 @@ namespace LeafoliaInventory
         {
             bool validID = false;
             bool successfulLogin = true;
+            
             var loginReqs = new ProjectDBEntities();
             int attempts = 0;
             
@@ -60,46 +61,44 @@ namespace LeafoliaInventory
                         errorLabel.Text = "";
                         canLogin = true;
                     }
-
-                    if (Employee.unHashPassword(employeeList[i].Password, passwordTextBox.Text) && canLogin)
+                    
+                    if (usernameTextBox.Text.Equals("10101") && passwordTextBox.Text.Equals("ownerPass"))
                     {
-                        currentEmployeeId = employeeList[i].EmployeeID;
-
-                        foreach (Login login in loginList)
-                        {
-                            if (login.EmployeeID.Equals(usernameTextBox.Text))
-                                loginReqs.Database.ExecuteSqlCommand("DELETE FROM Logins WHERE EmployeeID = '" + usernameTextBox.Text + "';");
-                        }
-
-                        if (usernameTextBox.Text.Equals("10101") && passwordTextBox.Text.Equals("ownerPass"))
-                        {
-                            CreateUserForm cuf = new CreateUserForm();
-                            this.Hide();
-                            cuf.ShowDialog(this);
-                            this.Close();
-                        }
-                        else if (passwordTextBox.Text.Contains("defaultPass"))
-                        {
-                            ChangePasswordForm cpf = new ChangePasswordForm();
-                            this.Hide();
-                            cpf.ShowDialog(this);
-                            this.Close();
-                        }
-                        else
-                        {
-                            MainMenuForm mmf = new MainMenuForm();
-                            this.Hide();
-                            mmf.ShowDialog();
-                            this.Close();
-                        }
+                        CreateUserForm cuf = new CreateUserForm();
+                        this.Hide();
+                        cuf.ShowDialog(this);
+                        this.Close();
                     }
-                    else
-                    {
-                        if (usernameTextBox.Text.Equals("10101"))
-                            errorLabel.Text = "Incorrect Password. Refer to User Manual for default login.";
-                        else
+                    else if (usernameTextBox.Text.Equals("10101"))
+                        errorLabel.Text = "Incorrect Password. Refer to User Manual for default login.";
+                    else {
+                        if (Employee.unHashPassword(employeeList[i].Password, passwordTextBox.Text) && canLogin)
                         {
+                            currentEmployeeId = employeeList[i].EmployeeID;
 
+                            foreach (Login login in loginList)
+                            {
+                                if (login.EmployeeID.Equals(usernameTextBox.Text))
+                                    loginReqs.Database.ExecuteSqlCommand("DELETE FROM Logins WHERE EmployeeID = '" + usernameTextBox.Text + "';");
+                            }
+
+
+                            if (passwordTextBox.Text.Contains("defaultPass"))
+                            {
+                                ChangePasswordForm cpf = new ChangePasswordForm();
+                                this.Hide();
+                                cpf.ShowDialog(this);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MainMenuForm mmf = new MainMenuForm();
+                                this.Hide();
+                                mmf.ShowDialog();
+                                this.Close();
+                            }
+                        }
+                        else { 
                             if (successfulLogin)
                                 loginReqs.Database.ExecuteSqlCommand("INSERT INTO Logins VALUES ('" + usernameTextBox.Text + "', " + attempts + ");");
                             else

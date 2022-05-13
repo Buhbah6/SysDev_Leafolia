@@ -69,7 +69,7 @@ namespace LeafoliaInventory
             foreach (Maintenance maintenance in maintenances)
             {
                 e.Graphics.DrawString(maintenance.ToString(), font, Brushes.Black, new Point(10, yAxis));
-                yAxis += 80;
+                yAxis += 100;
             }
 
             e.Graphics.DrawString("Products:", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(10, yAxis));
